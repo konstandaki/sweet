@@ -1,0 +1,124 @@
+type: google.api.Service
+config_version: 3
+http:
+  rules:
+    - selector: tv_service.TvService.GetChannels
+      post: /TvService/GetChannels
+      body: '*'
+      additional_bindings:
+        - post: /TvService/GetChannels.json
+          body: '*'
+        - post: /TvServerService/GetChannels
+          body: '*'
+        - post: /TvServerService/GetChannels.pb
+          body: '*'  
+        - post: /TvServerService/GetChannels.json
+          body: '*'
+    - selector: tv_service.TvService.GetTariffs
+      post: /TvService/GetTariffs
+      body: '*'
+      additional_bindings:
+        - post: /TvService/GetTariffs.json
+          body: '*'
+    - selector: tv_service.TvService.GetTariffsOffers
+      post: /TvService/GetTariffsOffers
+      body: '*'
+      additional_bindings:
+        - post: /TvService/GetTariffsOffers.json
+          body: '*'
+    - selector: tv_service.TvService.GetSubscriptions
+      post: /TvService/GetSubscriptions
+      body: '*'
+      additional_bindings:
+        - post: /TvService/GetSubscriptions.json
+          body: '*'
+    - selector: tv_service.TvService.OpenStream
+      post: /TvService/OpenStream
+      body: '*'
+      additional_bindings:
+        - post: /TvService/OpenStream.json
+          body: '*'
+        - post: /TvServerService/OpenStream
+          body: '*'
+        - post: /TvServerService/OpenStream.pb
+          body: '*'  
+        - post: /TvServerService/OpenStream.json
+          body: '*'
+    - selector: tv_service.TvService.UpdateStream
+      post: /TvService/UpdateStream
+      body: '*'
+      additional_bindings:
+        - post: /TvService/UpdateStream.json
+          body: '*'
+        - post: /TvServerService/UpdateStream
+          body: '*'
+        - post: /TvServerService/UpdateStream.pb
+          body: '*'  
+        - post: /TvServerService/UpdateStream.json
+          body: '*'
+    - selector: tv_service.TvService.CloseStream
+      post: /TvService/CloseStream
+      body: '*'
+      additional_bindings:
+        - post: /TvService/CloseStream.json
+          body: '*'
+        - post: /TvServerService/CloseStream
+          body: '*'
+        - post: /TvServerService/CloseStream.pb
+          body: '*'  
+        - post: /TvServerService/CloseStream.json
+          body: '*'
+    - selector: tv_service.TvService.GetUserInfo
+      post: /TvService/GetUserInfo
+      body: '*'
+      additional_bindings:
+        - post: /TvService/GetUserInfo.json
+          body: '*'
+        - post: /TvServerService/GetUserInfo
+          body: '*'
+        - post: /TvServerService/GetUserInfo.pb
+          body: '*'  
+        - post: /TvServerService/GetUserInfo.json
+          body: '*'
+    - selector: tv_service.TvService.GetUserChannel
+      post: /TvService/GetUserChannel
+      body: '*'
+      additional_bindings:
+        - post: /TvService/GetUserChannel.json
+          body: '*'
+        - post: /StbServerService/GetUserChannel
+          body: '*'
+        - post: /StbServerService/GetUserChannel.pb
+          body: '*'  
+        - post: /StbServerService/GetUserChannel.json
+          body: '*'
+    - selector: tv_service.TvService.SetUserChannel
+      post: /TvService/SetUserChannel
+      body: '*'
+      additional_bindings:
+        - post: /TvService/SetUserChannel.json
+          body: '*'
+        - post: /StbServerService/SetUserChannel
+          body: '*'  
+        - post: /StbServerService/SetUserChannel.pb
+          body: '*'
+        - post: /StbServerService/SetUserChannel.json
+          body: '*'
+    - selector: tv_service.TvService.GetMyVouchers
+      post: /TvService/GetMyVouchers
+      body: '*'
+      additional_bindings:
+        - post: /TvService/GetMyVouchers.json
+          body: '*'
+    - selector: tv_service.TvService.GetTvShowInfo
+      post: /TvService/GetTvShowInfo
+      body: '*'
+      additional_bindings:
+        - post: /TvService/GetTvShowInfo.json
+          body: '*'
+        - post: /TvServerService/GetTvShowInfo
+          body: '*'
+        - post: /TvServerService/GetTvShowInfo.pb
+          body: '*'
+        - post: /TvServerService/GetTvShowInfo.json
+          body: '*'

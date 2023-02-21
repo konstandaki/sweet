@@ -1,0 +1,1609 @@
+syntax = "proto2";
+
+package movie_service;
+
+option go_package = "gitlab.sweet.tv/proto/movie_service";
+option java_package = "com.konstandaki.sweettest.proto";
+
+
+import "google/api/annotations.proto";
+import "movie_service/vod_link.proto";
+import "google/protobuf/empty.proto";
+
+message Movie {
+    required int32 id = 1;
+    repeated ExternalIdPair external_id_pairs = 2;
+
+    optional string title = 3;
+    optional string title_en = 4;
+
+    optional string description = 5;
+    optional int32 year = 6;
+    optional int32 duration = 7;
+    optional int32 age_limit = 8;
+    optional string poster_url = 9;
+
+    optional float rating_imdb = 10;
+    optional float rating_kinopoisk = 11;
+
+    repeated int32 categories = 12;
+    repeated int32 countries = 13;
+    repeated int32 genres = 14;
+    repeated int32 owners = 15;
+
+    repeated Person people = 16;
+    repeated Season seasons = 17;
+
+    optional bool available = 18;
+    repeated int32 tariffs = 19;
+
+    optional bool is_favorite = 20;
+    optional WatchInfo watch_info = 21;
+
+    repeated MovieOffer offers = 22;
+
+    repeated Poster posters = 23;
+    optional string trailer_url = 24;
+    optional string tagline = 25;
+    optional string slug = 26;
+    optional bool downloadable = 27;
+    repeated int32 recommended_movies = 28;
+    repeated AudioTrack audio_tracks = 29;
+    repeated Subtitle subtitles = 30;
+    optional Statistics statistics = 31;
+    optional Rating user_rating = 32;
+    optional string banner_url = 33;
+    repeated Comment comments = 34;
+    optional sint64 release_date = 35;
+    optional bool released = 36;
+    optional int32 bought_period = 37;
+    optional string availability_info = 38;
+    repeated int32 similar_movies = 39;
+    optional int32 end_credits = 40;
+    optional float rating_sweet_tv = 41;
+    repeated int32 following_movies = 42;
+
+    optional int32 video_quality = 43;
+    optional string availability_info_color = 44;
+
+    optional int32 channel_id = 45;
+    optional int32 epg_id = 46;
+}
+
+message Category {
+    required int32 id = 1;
+    optional string title = 2;
+}
+
+message Genre {
+    required int32 id = 1;
+    optional string title = 2;
+    optional string icon_url = 3;
+    optional string slug = 4;
+    optional string banner_url = 5;
+    optional string icon_v2_url = 6;
+}
+
+message Subgenre {
+    required int32 id = 1;
+    optional string title = 2;
+    optional string icon_url = 3;
+    optional string slug = 4;
+    optional string banner_url = 5;
+    optional string icon_v2_url = 6;
+}
+
+message Country {
+    required int32 id = 1;
+    required string title = 2;
+    optional string code = 3;
+    optional string slug = 4;
+}
+
+message Section {
+    enum Type {
+        MAIN = 0;
+        TV = 1;
+        CINEMA = 2;
+        PREMIERES = 3;
+        SERIES = 4;
+        CARTOONS = 5;
+        PROFILE = 6;
+        CATALOG = 7;
+        MY_VIDEOS = 8;
+    }
+
+    required int32 id = 1;
+    optional Type type = 2;
+    optional string title = 3;
+    optional string icon_url = 4;
+    optional int32 banner_page = 5;
+    optional int32 collection_type = 6;
+}
+
+message BannerResolution {
+    required int32 id = 1;
+    required int32 width = 2;
+    required int32 height = 3;
+}
+
+message CabSectionItem {
+    enum Type {
+        // PersonalData
+        BalanceTopUpButton = 0;
+        BalanceInfo = 1;
+        UserIDInfo = 2;
+        PaymentInfo = 3;
+        TariffInfo = 4;
+        StatusInfo = 5;
+        ServicesInfo = 6;
+        // Promo
+        Promotions = 7;
+        PromoCodes = 8;
+        InviteFriend = 9;
+        PurchaseSetTopBox = 10;
+        // Settings
+        SubscriptionSettings = 11;
+        PayAccountUUIDSettings = 12;
+
+        // PersonalData
+        PayYourTariffButton = 13;
+
+    }
+    required int32 id = 1;
+    optional Type type = 2;
+    optional string title = 3;
+}
+
+message CabSection {
+    enum Type {
+        PersonalData = 0;
+        Promo = 1;
+        Tariffs = 2;
+        Services = 3;
+        ParentalControl = 4;
+        Settings = 5;
+    }
+
+    required int32 id = 1;
+    optional Type type = 2;
+    repeated CabSectionItem items = 3;
+    optional string title = 4;
+}
+
+message Poster {
+    enum Orientation {
+        Horizontal = 0;
+        Vertical = 1;
+    }
+
+    message Dimensions {
+        required int32 width = 1;
+        required int32 height = 2;
+    }
+
+    required string poster_url = 1;
+    required Orientation orientation = 2;
+    required Dimensions dimensions = 3;
+    optional bool blur = 4;
+}
+
+message Person {
+    required int32 id = 1;
+    optional string name = 2;
+    optional string name_original = 3;
+    optional Role role = 4;
+    optional string image_url = 5;
+    optional string biography = 6;
+    repeated Role roles = 7;
+    repeated int32 movies = 8;
+    optional string banner_url = 9;
+    optional string place_of_birth = 10;
+    optional sint64 date_of_birth = 11;
+    repeated int32 genres = 12;
+    optional string slug = 13;
+}
+
+message Role {
+    required int32 id = 1;
+    optional string title = 2;
+}
+
+message Season {
+    required int32 id = 1;
+    optional string title = 2;
+    repeated Episode episodes = 3;
+    optional int32 owner_id = 4;
+    optional int32 external_id = 5;
+}
+
+message Episode {
+    required int32 id = 1;
+    optional string title = 2;
+    optional int32 duration = 3;
+    optional int32 external_id = 4;
+    optional WatchInfo watch_info = 5;
+    optional string preview_url = 6;
+    optional int32 end_credits = 7;
+    repeated AudioTrack audio_tracks = 8;
+    repeated Subtitle subtitles = 9;
+    optional int32 start_loading_screen = 10;
+    optional int32 end_loading_screen = 11;
+}
+
+message Collection {
+    enum Type {
+        Movie = 0;
+        Channel = 1;
+        Genre = 2;
+        Subgenre = 3;
+        Epg = 4;
+        Collection = 5;
+        Banner = 6;
+        Person = 7;
+        TvShow = 8;
+    }
+
+    required int32 id = 1;
+    required string title = 2;
+    optional Type type = 3;
+    repeated int32 id_list = 4;
+    optional string slug = 5;
+    repeated CollectionItem item_list = 6;
+    repeated Collection collection_list = 7;
+    optional string image_url = 9;
+    optional string dark_theme_image_url = 10;
+    optional PromoBannerAction action = 11;
+    optional bool closable = 12;
+    repeated int32 secondary_id_list = 13;
+}
+
+message CollectionItem {
+    optional int32 id = 1;
+    optional int32 secondary_id = 2;
+    optional string title = 3;
+    optional string genres = 4;
+    optional string image_url = 5;
+    optional string available_in = 6;
+}
+
+message SortMode {
+    required int32 id = 1;
+    optional string title = 2;
+    optional string icon_url = 3;
+}
+
+message Period {
+    required int32 id = 1;
+    optional int32 rent_hours = 2;
+    optional int32 watch_hours = 3;
+}
+
+message PremiereBanner {
+    required int32 id = 1;
+    required string image_url = 2;
+    required string title = 3;
+    required int32 movie_id = 4;
+}
+
+message VideoQuality {
+    required int32 id = 1;
+    required string name = 2;
+    optional string description = 3;
+    optional string icon_url = 4;
+}
+
+message Language {
+    optional int32 id = 1;
+    optional string title = 2;
+    optional string icon_url = 3;
+    optional string iso_code = 4;
+    optional string slug = 5;
+}
+
+message MovieOffer {
+    enum OfferType {
+        Buy = 0;
+        Rent = 1;
+    }
+    required int32 id = 1;
+    required OfferType offer_type = 2;
+    required VideoQuality video_quality = 3;
+    required string title = 4;
+    required string offer_icon = 5;
+    required Period period = 6;
+    required int32 price = 7;
+    required string product_id = 8;
+    optional int32 store_id = 9;
+    optional int32 store_status = 10;
+    optional bool discounted = 11;
+    optional int32 original_price = 12;
+    optional int32 tier_id = 13;
+}
+
+message AudioTrack {
+    required int32 index = 1;
+    required string language = 2;
+    required string sound_scheme = 3;
+    optional string iso_code = 4;
+}
+
+message Subtitle {
+    required string language = 1;
+    required string iso_code = 2;
+    optional string url = 3;
+    optional bool forced = 4;
+}
+
+message Statistics {
+    optional int32 like_count = 1;
+    optional int32 dislike_count = 2;
+}
+
+message Comment {
+    optional int32 id = 1;
+    optional string author = 2;
+    optional string text = 3;
+    optional bool editable = 4;
+    optional bool delible  = 5;
+    optional Statistics statistics = 6;
+    optional Rating user_rating = 7;
+    repeated Comment replies = 8;
+    optional uint64 created_at = 9;
+    optional uint64 updated_at = 10;
+    optional float rating = 11;
+}
+
+message Owner {
+    enum Id {
+        Undefined = 0;
+        MEGOGO = 1;
+        Amedia = 2;
+        Sonar = 3;
+        IPMedia = 4;
+        ContinentTV = 5;
+        UTS = 6;
+        Viasat = 7;
+        ViasatPremium = 8;
+        BitMediaCom = 9;
+        StarLight = 10;
+        DigitalScreens = 11;
+        MostVideo = 12;
+        SweetTVPremiere = 1000;
+        SweetTVMoldovaPremiere = 1001;
+    }
+    required int32 id = 1;
+    optional string title = 2;
+}
+
+message WatchInfo {
+    optional int32 last_pos = 1;
+    optional int32 last_pos_in_percents = 2;
+    optional int32 last_episode_id = 3;
+    optional int64 last_time = 4;
+    optional int32 referral_movie_id = 5;
+    optional int32 movie_id = 6;
+    optional int32 episode_id = 7;
+}
+
+message ExternalIdPair {
+    required int32 owner_id = 1;
+    required int32 external_id = 2;
+    optional bool preferred = 3 [default = false];
+}
+
+message Recommendation {
+    enum RecommendationType {
+        Channel = 1;
+        Movie = 2;
+    }
+    required RecommendationType type = 1;
+    required int32 content_id = 2;
+    required string image_url = 3;
+    required string title = 4;
+    optional string description = 5;
+    optional string trailer_url = 6;
+    optional int32 secondary_id = 7;
+}
+
+message GetGenreMoviesRequest {
+    optional string auth = 1;
+    required int32 genre_id = 2;
+}
+
+message GetGenreMoviesResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+    repeated int32 movies = 2;
+}
+
+message GetSubgenreMoviesRequest {
+    optional string auth = 1;
+    required int32 subgenre_id = 2;
+}
+
+message GetSubgenreMoviesResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+    repeated int32 movies = 2;
+}
+
+message GetMovieInfoRequest {
+    optional string auth = 1;
+    repeated int32 movies = 2;
+    optional int32 offset = 3 [default = 0];
+    optional int32 limit = 4 [default = 0];
+    optional bool need_extended_info = 5 [default = true];
+    optional int32 sort_mode_id = 6;
+    optional bool need_bundle_offers = 7;
+}
+
+message GetMovieInfoResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+    repeated Movie movies = 2;
+}
+
+message GetConfigurationRequest {
+    optional string auth = 1;
+}
+
+message GetConfigurationResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+    repeated Category categories = 2;
+    repeated Country countries = 3;
+    repeated Genre genres = 4;
+    repeated Owner owners = 5;
+    repeated Role roles = 6;
+    repeated Collection collections = 7;
+    repeated SortMode sort_modes = 8;
+    repeated Subgenre subgenres = 9;
+    repeated VideoQuality video_qualities = 10;
+    repeated Language languages = 11;
+    repeated Section sections = 12;
+    repeated BannerResolution banner_resolutions = 13;
+    repeated string screensaver_animations = 14;
+    repeated CabSection cab_sections = 15;
+}
+
+message GetRecommendedMoviesRequest {
+    optional string auth = 1;
+}
+
+message GetRecommendedMoviesResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated int32 movies = 2;
+}
+enum LinkType {
+    HLS = 0;
+    DASH = 1;
+    MSS = 2;
+}
+
+message GetLinkRequest {
+    optional string auth = 1;
+    required int32 movie_id = 2;
+    required int32 owner_id = 3;
+    optional int32 episode_id = 4;
+    optional string session_id = 5;
+    optional int32 audio_track = 6;
+    optional string subtitle = 7;
+    optional LinkType preferred_link_type = 8;
+    optional bool preview_mode = 9;
+    optional string pin_code = 10;
+}
+
+message GetLinkResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+        ExternalError = 2;
+        NotFound = 3;
+        NeedDRM = 4;
+        CodeInvalid = 5;
+    }
+    required Result status = 1;
+    optional string url = 2;
+    repeated Ad ads = 3;
+    optional string ad_tag_url = 4;
+    optional LinkType link_type = 5;
+    optional DRMType drm_type = 6;
+    optional string license_server_url = 7;
+    optional Thumbnails thumbnails = 8;
+    optional bool mesh = 9;
+    optional string content_key = 10;
+    repeated Subtitle subtitles = 11;
+}
+
+message Thumbnails {
+    required string image_url = 1;
+    optional string playlist_url = 2;
+    optional int32 interval = 3;
+    optional int32 cols = 4;
+    optional int32 rows = 5;
+}
+
+message GetCollectionMoviesRequest {
+    optional string auth = 1;
+    required int32 collection_id = 2;
+    optional bool include_hidden = 3;
+}
+
+message GetCollectionMoviesResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+    repeated int32 movies = 2;
+    optional string title = 3;
+    optional string slug = 4;
+}
+
+message GetPremiereMoviesRequest {
+    optional string auth = 1;
+}
+
+message PremieresCollection {
+    required int32 id = 1;
+    required string title = 2;
+    repeated int32 movies = 3;
+}
+
+message GetPremiereMoviesResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+    repeated PremieresCollection collection = 2;
+}
+
+message GetWatchListRequest {
+    optional string auth = 1;
+    optional int32 limit = 2;
+}
+
+message GetWatchListResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+    repeated int32 movies = 2;
+}
+
+message SetWatchInfoRequest {
+    optional string auth = 1;
+    required int32 movie_id = 2;
+    optional int32 episode_id = 3;
+    optional WatchInfo info = 4;
+    optional int32 position = 5;
+}
+
+message SetWatchInfoResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+}
+
+message ClearWatchInfoRequest {
+}
+
+message ClearWatchInfoResponse {
+    enum Result {
+        OK = 0;
+    }
+    required Result result = 1;
+}
+
+message GetFavoriteMoviesRequest {
+    optional string auth = 1;
+}
+
+message GetFavoriteMoviesResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated int32 movies = 2;
+}
+
+message AddFavoriteMovieRequest {
+    optional string auth = 1;
+    required int32 movie_id = 2;
+}
+
+message AddFavoriteMovieResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+}
+
+message RemoveFavoriteMovieRequest {
+    optional string auth = 1;
+    required int32 movie_id = 2;
+}
+
+message RemoveFavoriteMovieResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+}
+
+message GetPremiereBannersRequest {
+    optional string auth = 1;
+    optional Page page = 2;
+}
+
+message GetPremiereBannersResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated PremiereBanner banners = 2;
+}
+
+message GetPurchasedMoviesRequest {
+    optional string auth = 1;
+}
+
+enum Page {
+    HOME = 0;
+    MOVIE = 1;
+    PREMIERE = 2;
+    SERIES = 3;
+    CARTOON = 4;
+}
+
+enum PromoBannerAction {
+    SHOW_CHANNEL = 0;
+    SHOW_MOVIE = 1;
+    SHOW_PREMIERE = 2;
+    SHOW_COLLECTION = 3;
+    PROPOSE_TARIFF = 4;
+    PROPOSE_SUBSCRIPTION = 5;
+    PROPOSE_SERVICE = 6;
+    PROPOSE_PAYMENT = 7;
+    ENTER_PROMOCODE = 8;
+    ENTER_MOVIE_PROMOCODE = 9;
+    OPEN_WEB_SITE = 10;
+    RATE_APPLICATION = 11;
+    INVITE_FRIEND = 12;
+    BIND_NEW_DEVICE = 13;
+    OPEN_CHATBOT = 14;
+    FILL_USER_DATA = 15;
+    SHOW_INFO = 16;
+    SHOW_PROMOTIONS = 17;
+    SIGNUP_USER = 18;
+    START_TUTORIAL = 19;
+}
+
+message PromoBannerImage {
+    required int32 resolution_id = 1;
+    required string url = 2;
+}
+
+message PromoBanner {
+    enum ContentType {
+        MOVIE = 0;
+        CHANNEL = 1;
+    }
+
+    required int32 id = 1;
+    required string image_url = 2;
+    required string title = 3;
+    required PromoBannerAction promo_banner_action = 4;
+    required int32 content_id = 5;
+    optional bool user_targeted = 6;
+    optional string slug = 7;
+
+    optional string content_title = 8;
+    optional string content_tagline = 9;
+    optional float content_rating = 10;
+    optional int32 content_year = 11;
+    repeated int32 content_countries = 12;
+    repeated int32 content_genres = 13;
+    optional int32 content_duration = 14;
+    optional int32 epg_id = 15;
+    optional string url = 16;
+    optional int32 secondary_content_id = 17;
+    optional float sum = 18;
+    repeated int32 content_list = 19;
+    optional ContentType content_type = 20;
+    repeated PromoBannerImage images = 21;
+    optional string ambilight_color = 22;
+    optional string trailer_url = 23;
+}
+
+message GetPromoBannersRequest {
+    optional string auth = 1;
+    optional Page page = 2;
+    optional bool need_extended_info = 3 [default = false];
+}
+
+message GetPromoBannersResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated PromoBanner banners = 2;
+}
+
+message GetPurchasedMoviesResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated int32 movies = 2;
+}
+
+message GetPersonInfoRequest {
+    optional string auth = 1;
+    required int32 person_id = 2;
+}
+
+message GetPersonInfoResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    optional Person person = 2;
+}
+
+message GetPersonsInfoRequest {
+    optional string auth = 1;
+    repeated int32 persons = 2;
+}
+
+message GetPersonsInfoResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated Person persons = 2;
+}
+
+message GetDownloadableMoviesRequest {
+    optional string auth = 1;
+}
+
+message GetDownloadableMoviesResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated int32 movies = 2;
+}
+
+message RateRequest {
+    optional string auth = 1;
+    optional Rating rating = 2;
+    optional int32 movie_id = 3;
+    optional int32 comment_id = 4;
+    optional uint64 account_id = 100;
+}
+
+message RateResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+}
+
+enum Rating {
+    None = 0;
+    Like = 1;
+    Dislike = 2;
+}
+
+message GetCollectionsRequest {
+    enum Type {
+        HOME = 0;
+        MOVIE = 1;
+        PREMIERE = 2;
+        SERIES = 3;
+        CARTOON = 4;
+        TV = 5;
+    }
+    optional string auth = 1;
+    optional Type type = 2;
+}
+
+message GetCollectionsResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+    repeated Collection collection = 2;
+}
+
+message PostCommentRequest {
+    optional string auth = 1;
+    optional int32 movie_id = 2;
+    optional int32 parent_id = 3;
+    optional string text = 4;
+}
+
+message PostCommentResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+        Error = 2;
+    }
+    optional Result status = 1;
+    optional string message = 2;
+}
+
+message EditCommentRequest {
+    optional string auth = 1;
+    optional int32 comment_id = 2;
+    optional string text = 3;
+}
+
+message EditCommentResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+        Error = 2;
+    }
+    optional Result status = 1;
+    optional string message = 2;
+}
+
+message DeleteCommentRequest {
+    optional string auth = 1;
+    optional int32 comment_id = 2;
+    optional int32 movie_id = 3;
+}
+
+message DeleteCommentResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+        Error = 2;
+    }
+    optional Result status = 1;
+    optional string message = 2;
+}
+
+message InternalCommentMessage {
+    enum Action {
+        Post = 0;
+        Edit = 1;
+        Delete = 2;
+    }
+    optional Action action = 1;
+    optional int32 movie_id = 2;
+    optional int32 parent_id = 3;
+    optional int32 comment_id = 4;
+    optional string text = 5;
+    optional uint64 account_id = 100;
+}
+
+message Ad {
+    enum MediaType {
+        VIDEO = 0;
+        IMAGE = 1;
+    }
+
+    enum ContentType {
+        Movie = 0;
+        Channel = 1;
+        General = 2;
+    }
+
+    enum Type {
+        PREROLL = 0;
+        MIDROLL = 1;
+        POSTROLL = 2;
+    }
+
+    optional int32 id = 1;
+    optional Type type = 2;
+    optional MediaType media_type = 3;
+    optional ContentType content_type = 4;
+    optional int64 start_time = 5;
+    optional bool skippable = 6;
+    optional int32 skip_offset = 7;
+    optional string title = 8;
+    optional string description = 9;
+    optional string content_url = 10;
+    optional int32 content_id = 11;
+    optional string vast_url = 12;
+    optional int32 order = 13;
+    optional int32 category_id = 14;
+}
+
+message Filter {
+    optional int32 id = 1;
+    optional int32 type_id = 2;
+    optional int32 genre_id = 3;
+    optional int32 country_id = 4;
+    optional int32 order = 5;
+    optional string text = 6;
+    optional int32 year_from = 7;
+    optional int32 year_till = 8;
+    optional int32 audio_track_language_id = 9;
+    optional int32 category_id = 10;
+    optional int32 subtitle_language_id = 11;
+}
+
+message FilterGroup {
+    enum Type {
+        Genre = 0;
+        Downloadable = 1;
+        Year = 2;
+        Country = 3;
+        Available = 4;
+        Audiotrack = 5;
+        Owner = 6;
+        Category = 7;
+        Subtitle = 8;
+    }
+    optional Type type = 1;
+    optional string title = 2;
+    repeated Filter filters = 3;
+}
+
+message GetFiltersRequest {
+    optional string auth = 1;
+    repeated FilterGroup selected_filters = 2;
+    optional FilterGroup.Type selected_group = 3;
+    optional bool need_sort_modes = 4;
+}
+
+message GetFiltersResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    optional Result status = 1;
+    repeated FilterGroup filters  = 2;
+    repeated int32 active_filters = 3;
+    repeated SortMode sort_modes = 4;
+}
+
+message GetFilteredMoviesRequest {
+    optional string auth = 1;
+    repeated int32 filters = 2;
+    optional int32 sort_mode_id = 3;
+}
+
+message GetFilteredMoviesResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    optional Result status = 1;
+    repeated int32 movies = 2;
+}
+
+message FilterOption {
+    optional int32 id = 1;
+    optional string title = 2;
+    optional string path = 3;
+    repeated int32 filters = 4;
+    optional string slug = 5;
+}
+
+message GetFilterOptionRequest {
+    optional string auth = 1;
+    optional int32 filter_option_id = 2;
+}
+
+message GetFilterOptionResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    optional Result status = 1;
+    optional FilterOption filter_option = 2;
+}
+
+message NotifyMovieReleaseRequest {
+    required int32 movie_id = 1;
+    optional string email = 2;
+}
+
+message NotifyMovieReleaseResponse {
+    enum Result {
+        OK = 0;
+        NeedEmail = 1;
+    }
+    optional Result status = 1;
+}
+
+message GetRecommendationsRequest {
+}
+
+message GetRecommendationsResponse {
+    repeated Recommendation recommendations = 1;
+}
+
+message GetAllMoviesInfoResponse {
+    repeated Movie movies = 1;
+}
+
+service MovieService {
+    rpc GetPromoBanners (GetPromoBannersRequest) returns (GetPromoBannersResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetPromoBanners"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetPromoBanners.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/PromoServerService/GetPromoBanners"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/PromoServerService/GetPromoBanners.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/PromoServerService/GetPromoBanners.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetPremiereBanners (GetPremiereBannersRequest) returns (GetPremiereBannersResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetPremiereBanners"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetPremiereBanners.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/PromoServerService/GetPremiereBanners"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/PromoServerService/GetPremiereBanners.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/PromoServerService/GetPremiereBanners.json"
+                body: "*"
+            }
+        };
+    }
+    
+    rpc GetGenreMovies (GetGenreMoviesRequest) returns (GetGenreMoviesResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetGenreMovies"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetGenreMovies.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetGenreMovies"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetGenreMovies.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetGenreMovies.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetSubgenreMovies (GetSubgenreMoviesRequest) returns (GetSubgenreMoviesResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetSubgenreMovies"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetSubgenreMovies.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetMovieInfo (GetMovieInfoRequest) returns (GetMovieInfoResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetMovieInfo"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetMovieInfo.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetMovieInfo"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetMovieInfo.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetMovieInfo.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetLink (GetLinkRequest) returns (GetLinkResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetLink"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetLink.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetLink"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetLink.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetLink.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetPremiereMovies (GetPremiereMoviesRequest) returns (GetPremiereMoviesResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetPremiereMovies"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetPremiereMovies.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPremiereMovies"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPremiereMovies.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPremiereMovies.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetPurchasedMovies (GetPurchasedMoviesRequest) returns (GetPurchasedMoviesResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetPurchasedMovies"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetPurchasedMovies.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPurchasedMovies"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPurchasedMovies.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPurchasedMovies.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetConfiguration (GetConfigurationRequest) returns (GetConfigurationResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetConfiguration"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetConfiguration.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetConfiguration"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetConfiguration.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetConfiguration.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetRecommendedMovies (GetRecommendedMoviesRequest) returns (GetRecommendedMoviesResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetRecommendedMovies"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetRecommendedMovies.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetRecommendedMovies"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetRecommendedMovies.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetRecommendedMovies.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetCollectionMovies (GetCollectionMoviesRequest) returns (GetCollectionMoviesResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetCollectionMovies"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetCollectionMovies.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetCollectionMovies"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetCollectionMovies.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetCollectionMovies.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc GetWatchList (GetWatchListRequest) returns (GetWatchListResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetWatchList"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetWatchList.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetWatchList"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetWatchList.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetWatchList.json"
+                body: "*"
+            }
+        };
+    }
+    rpc SetWatchInfo (SetWatchInfoRequest) returns (SetWatchInfoResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/SetWatchInfo"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/SetWatchInfo.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/SetWatchInfo"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/SetWatchInfo.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/SetWatchInfo.json"
+                body: "*"
+            }
+        };
+    }
+    rpc ClearWatchInfo (ClearWatchInfoRequest) returns (ClearWatchInfoResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/ClearWatchInfo"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/ClearWatchInfo.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/ClearWatchInfo"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/ClearWatchInfo.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/ClearWatchInfo.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetFavoriteMovies (GetFavoriteMoviesRequest) returns (GetFavoriteMoviesResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetFavoriteMovies"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetFavoriteMovies.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetFavoriteMovies"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetFavoriteMovies.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetFavoriteMovies.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetPersonInfo (GetPersonInfoRequest) returns (GetPersonInfoResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetPersonInfo"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetPersonInfo.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPersonInfo"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPersonInfo.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPersonInfo.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetPersonsInfo (GetPersonsInfoRequest) returns (GetPersonsInfoResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetPersonsInfo"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetPersonsInfo.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPersonsInfo"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPersonsInfo.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetPersonsInfo.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetDownloadableMovies (GetDownloadableMoviesRequest) returns (GetDownloadableMoviesResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetDownloadableMovies"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetDownloadableMovies.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetDownloadableMovies"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetDownloadableMovies.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetDownloadableMovies.json"
+                body: "*"
+            }
+        };
+    }
+    rpc Rate (RateRequest) returns (RateResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/Rate"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/Rate.json"
+                body: "*"
+            }
+        };
+    } 
+    rpc GetCollections (GetCollectionsRequest) returns (GetCollectionsResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetCollections"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetCollections.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetCollections"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetCollections.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/GetCollections.json"
+                body: "*"
+            }
+        };
+    }
+    rpc AddFavoriteMovie (AddFavoriteMovieRequest) returns (AddFavoriteMovieResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/AddFavoriteMovie"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/AddFavoriteMovie.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/AddFavoriteMovie"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/AddFavoriteMovie.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/AddFavoriteMovie.json"
+                body: "*"
+            }
+        };
+    }
+    rpc RemoveFavoriteMovie (RemoveFavoriteMovieRequest) returns (RemoveFavoriteMovieResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/RemoveFavoriteMovie"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/RemoveFavoriteMovie.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/RemoveFavoriteMovie"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/RemoveFavoriteMovie.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/MovieServerService/RemoveFavoriteMovie.json"
+                body: "*"
+            }
+        };
+    }
+    rpc PostComment (PostCommentRequest) returns (PostCommentResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/PostComment"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/PostComment.json"
+                body: "*"
+            }
+        };
+    }
+    rpc EditComment (EditCommentRequest) returns (EditCommentResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/EditComment"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/EditComment.json"
+                body: "*"
+            }
+        };
+    }
+    rpc DeleteComment (DeleteCommentRequest) returns (DeleteCommentResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/DeleteComment"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/DeleteComment.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc GetFilters (GetFiltersRequest) returns (GetFiltersResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetFilters"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetFilters.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetFilteredMovies (GetFilteredMoviesRequest) returns (GetFilteredMoviesResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetFilteredMovies"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetFilteredMovies.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetFilterOption (GetFilterOptionRequest) returns (GetFilterOptionResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetFilterOption"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetFilterOption.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc NotifyMovieRelease (NotifyMovieReleaseRequest) returns (NotifyMovieReleaseResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/NotifyMovieRelease"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/NotifyMovieRelease.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetRecommendations (GetRecommendationsRequest) returns (GetRecommendationsResponse) {
+        option (google.api.http) = {
+            post: "/MovieService/GetRecommendations"
+            body: "*"
+            additional_bindings {
+                post: "/MovieService/GetRecommendations.json"
+                body: "*"
+            }
+        };
+    }
+}
+
+service InternalMovieService {
+    rpc GetAllMoviesInfo (google.protobuf.Empty) returns (GetAllMoviesInfoResponse);
+}

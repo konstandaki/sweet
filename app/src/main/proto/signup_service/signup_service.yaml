@@ -1,0 +1,74 @@
+type: google.api.Service
+config_version: 3
+http:
+  rules:
+    - selector: signup_service.SignupService.SetPhone
+      post: /SignupService/SetPhone
+      body: '*'
+      additional_bindings:
+        - post: /SignupService/SetPhone.json
+          body: '*'
+    - selector: signup_service.SignupService.SetCode
+      post: /SignupService/SetCode
+      body: '*'
+      additional_bindings:
+        - post: /SignupService/SetCode.json
+          body: '*'
+    - selector: signup_service.SignupService.GetPartnerCode
+      post: /SignupService/GetPartnerCode
+      body: '*'
+      additional_bindings:
+        - post: /SignupService/GetPartnerCode.json
+          body: '*'
+    - selector: signup_service.SignupService.Auth
+      post: /SignupService/Auth
+      body: '*'
+      additional_bindings:
+        - post: /SignupService/Auth.pb
+          body: '*'
+        - post: /SignupService/Auth.json
+          body: '*'
+    - selector: signup_service.SignupService.AuthCheck
+      post: /SignupService/AuthCheck
+      body: '*'
+      additional_bindings:
+        - post: /SignupService/AuthCheck.json
+          body: '*'
+    - selector: signup_service.SignupService.Logout
+      post: /SignupService/Logout
+      body: '*'
+      additional_bindings:
+        - post: /SignupService/Logout.json
+          body: '*'
+    - selector: signup_service.SignupService.CodeAuthTransactionStart
+      post: /SignupService/CodeAuthTransactionStart
+      body: '*'
+      additional_bindings:
+        - post: /SignupService/CodeAuthTransactionStart.pb
+          body: '*'
+        - post: /SignupService/CodeAuthTransactionStart.json
+          body: '*'
+    - selector: signup_service.SignupService.CodeAuthTransactionUpdate
+      post: /SignupService/CodeAuthTransactionUpdate
+      body: '*'
+      additional_bindings:
+        - post: /SignupService/CodeAuthTransactionUpdate.pb
+          body: '*'
+        - post: /SignupService/CodeAuthTransactionUpdate.json
+          body: '*'
+    - selector: signup_service.SignupService.CodeAuthTransactionSetPhone
+      post: /SignupService/CodeAuthTransactionSetPhone
+      body: '*'
+      additional_bindings:
+        - post: /SignupService/CodeAuthTransactionSetPhone.pb
+          body: '*'
+        - post: /SignupService/CodeAuthTransactionSetPhone.json
+          body: '*'
+    - selector: signup_service.SignupService.CodeAuthTransactionSetCode
+      post: /SignupService/CodeAuthTransactionSetCode
+      body: '*'
+      additional_bindings:
+        - post: /SignupService/CodeAuthTransactionSetCode.pb
+          body: '*'
+        - post: /SignupService/CodeAuthTransactionSetCode.json
+          body: '*'

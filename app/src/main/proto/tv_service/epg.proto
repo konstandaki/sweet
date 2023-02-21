@@ -1,0 +1,30 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+message EpgRecord {
+    required int32 id = 1;
+    required string text = 2;
+    required int64 time_start = 3;
+    required int64 time_stop = 4;
+}
+
+message GetEpgRecordPreviewRequest {
+    required int32 channel_id = 1;
+    required int32 epg_id = 2;
+    required int64 time_stamp = 3;
+}
+
+message GetEpgRecordPreviewResponse {
+    optional string preview_url = 1;
+}
+
+message EpgRecordPreviewDecodedLink {
+    required string link = 1;
+    required uint64 time_start = 2;
+    required uint64 time_stop = 3;
+    required int64 time_stamp = 4;
+}
+

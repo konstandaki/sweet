@@ -1,0 +1,46 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+import "tv_service/epg.proto";
+
+message Channel {
+    required int32 id = 1;
+    required string name = 2;
+    optional bytes icon = 3;
+    repeated EpgRecord epg = 4;
+    repeated int32 offset = 5;
+    optional bool available = 6 [ default = true ];
+    required bool hidden = 7;
+    repeated int32 category = 8;
+    optional bool hidden_in_full_list = 9;
+    optional bytes icon_big = 10;
+    optional bool catchup = 11;
+    optional int32 catchup_duration = 12;
+    optional string icon_url = 13;
+    repeated int32 tariffs = 14;
+    optional bool drm = 15;
+    optional int32 owner_id = 16;
+    optional string slug = 17;
+    optional int32 number = 18;
+    optional string banner_url = 19;
+    optional string dark_theme_icon_url = 20;
+    optional string colour = 21;
+    optional string icon_v2_url = 22;
+    repeated string translations = 23;
+
+    optional string availability_info = 38;
+    optional string availability_info_color = 44;
+
+    // 100+ reserved for flags
+    optional bool rewind_disabled = 100;
+    optional bool fast_forward_disabled = 101;
+    optional bool speedup_disabled = 102;
+
+    // 200+ reserved for messages
+    optional string rewind_message = 200;
+    optional string fast_forward_message = 201;
+    optional string speedup_message = 202;
+}

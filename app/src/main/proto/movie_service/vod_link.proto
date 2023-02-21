@@ -1,0 +1,43 @@
+syntax = "proto2";
+
+package movie_service;
+
+option go_package = "gitlab.sweet.tv/proto/movie_service";
+option java_package = "com.ua.mytrinity.tv_client.proto";
+
+enum DRMType {
+    DRM_NONE = 0;
+    DRM_AES = 1;
+    DRM_WIDEVINE = 2;
+    DRM_PLAYREADY = 3;
+    DRM_FAIRPLAY = 4;
+}
+
+message VodLink {
+    required int32 movie_id = 1;
+    optional int32 episode_id = 2;
+    required uint32 ip = 3;
+    required uint64 valid_until = 4;
+    required int32 video_quality = 5;
+    required DRMType drm_type = 6;
+    optional int32 audio_track = 7;
+    optional string subtitle_language = 8;
+    optional uint32 cut_duration = 9;
+    optional int32 min_video_quality = 10;
+}
+
+enum AllowedTracks {
+    SD_ONLY = 0;
+    SD_HD = 1;
+    SD_UHD1 = 2;
+    SD_UHD2 = 3;
+}
+
+message VodDRMLink {
+    required uint64 contract_id = 1;
+    required string content_id = 2;
+    required AllowedTracks allowed_tracks = 3;
+    required uint32 ip = 4;
+    required uint64 valid_until = 5;
+}
+

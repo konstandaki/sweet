@@ -1,0 +1,213 @@
+syntax = "proto3";
+
+package authentication_service_v2;
+
+option java_package = "com.konstandaki.authentication_service_v2";
+
+import "google/api/annotations.proto";
+//import "protoc-gen-openapiv2/options/annotations.proto";
+
+import "device/device.proto";
+import "google/protobuf/empty.proto";
+
+enum AuthMethod {
+    METHOD_UNSPECIFIED = 0;
+    LEGACY = 1;
+    OTP = 2;
+    SIGNIN_CODE = 3;
+    OAUTH = 4;
+    ISP_CODE = 5;
+    EMAIL = 6;
+    EXCHANGEABLE_ONE_TIME_TOKEN = 7;
+}
+
+enum OAuthPlatform {
+    PLATFORM_UNSPECIFIED = 0;
+    WEB = 1;
+    ANDROID = 2;
+    IOS = 3;
+    IOT_DEVICES = 4;
+}
+
+enum OAuthProvider {
+    GOOGLE = 0;
+    FACEBOOK = 1;
+    APPLE = 2;
+    SWEET_TV = 99;
+    PROVIDER_UNKNOWN = 100;
+}
+
+message RefreshToken {
+    string id = 1;
+    uint64 user_id = 2;
+    device.DeviceInfo device = 3;
+    string ip_address = 4;
+    string country = 5;
+    AuthMethod method = 6;
+    OAuthProvider provider = 7;
+    int64 last_access = 8;
+    int64 last_oauth_verification = 9;
+    string oauth_token = 10;
+    string oauth_client_id = 11;
+    int64 roaming_start_date = 12;
+    int32 billing_id = 13; // in which billing account is created
+}
+
+message IssueRequest {
+    uint64 user_id = 1;
+    device.DeviceInfo device = 2;
+    string ip_address = 3;
+    string country = 4;
+    AuthMethod method = 5;
+    OAuthProvider provider = 6;
+    OAuthPlatform platform = 7;
+    string oauth_refresh_token = 8 [deprecated = true];
+    string oauth_client_id = 9 [ deprecated = true];
+    string profile_id = 10;
+    int32 billing_id = 11;
+}
+message IssueResponse {
+    string refresh_token = 1;
+    string access_token = 2;
+    int32 expires_in = 3;
+}
+
+message RevokeRequest {
+    string refresh_token = 1;
+    string access_token = 2;
+}
+message RevokeResponse {
+    enum Result {
+        OK = 0;
+        ERROR = 1;
+    }
+    Result result = 1;
+}
+
+message ExchangeRequest {
+    string auth_token = 1;
+}
+message ExchangeResponse {
+    enum Result {
+        OK = 0;
+        ERROR = 1;
+    }
+    Result result = 1;
+    string refresh_token = 2;
+    string access_token = 3;
+    int32 expires_in = 4;
+}
+
+message TokenRequest {
+    string refresh_token = 1;
+    device.DeviceInfo device = 2;
+    string profile_id = 3;
+}
+message TokenResponse {
+    enum Result {
+        OK = 0;
+        ERROR = 1;
+    }
+    Result result = 1;
+    string access_token = 2;
+    int32 expires_in = 3;
+}
+
+message GetAvailableMethodsRequest {
+    device.DeviceInfo device = 1;
+}
+message GetAvailableMethodsResponse {
+    repeated AuthMethod methods = 1;
+    repeated OAuthProvider providers = 2;
+}
+
+message UpdateTokenRequest {
+    string refresh_token = 1;
+    uint64 account_id = 2;
+}
+
+message CreateOneTimeTokenRequest {
+    uint64 account_id = 1;
+    int32 billing_id = 2;
+}
+message CreateOneTimeTokenResponse {
+    string token = 1;
+    int64 expires_in = 2;
+}
+
+message ExchangeOneTimeTokenRequest {
+    string token = 1;
+    device.DeviceInfo device = 2;
+    string ip_address = 3;
+}
+message ExchangeOneTimeTokenResponse {
+    string refresh_token = 1;
+    string access_token = 2;
+    int32 expires_in = 3;
+}
+
+service AuthenticationService {
+    rpc GetAvailableMethods(GetAvailableMethodsRequest) returns (GetAvailableMethodsResponse) {
+        option (google.api.http) = {
+            post: "/AuthenticationService/GetAvailableMethods"
+            body: "*"
+            additional_bindings: {
+                post: "/AuthenticationService/GetAvailableMethods.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc Issue (IssueRequest) returns (IssueResponse) {
+        option (google.api.http) = {
+            post: "/AuthenticationService/Issue"
+            body: "*"
+            additional_bindings: {
+                post: "/AuthenticationService/Issue.json"
+                body: "*"
+            }
+        };
+    }
+    rpc Revoke (RevokeRequest) returns (RevokeResponse) {
+        option (google.api.http) = {
+            post: "/AuthenticationService/Revoke"
+            body: "*"
+            additional_bindings: {
+                post: "/AuthenticationService/Revoke.json"
+                body: "*"
+            }
+        };
+    }
+    rpc Exchange (ExchangeRequest) returns (ExchangeResponse) {
+        option (google.api.http) = {
+            post: "/AuthenticationService/Exchange"
+            body: "*"
+            additional_bindings: {
+                post: "/AuthenticationService/Exchange.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc CreateOneTimeToken (CreateOneTimeTokenRequest) returns (CreateOneTimeTokenResponse);
+    // ExchangeOneTimeToken is designed to be used internally
+    rpc ExchangeOneTimeToken (ExchangeOneTimeTokenRequest) returns (ExchangeOneTimeTokenResponse) {
+        option (google.api.http) = {
+            post: "/AuthenticationService/ExchangeOneTimeToken.json"
+            body: "*"
+        };
+    }
+
+    rpc Token (TokenRequest) returns (TokenResponse) {
+        option (google.api.http) = {
+            post: "/AuthenticationService/Token"
+            body: "*"
+            additional_bindings: {
+                post: "/AuthenticationService/Token.json"
+                body: "*"
+            }
+        };
+    }
+    rpc UpdateToken (UpdateTokenRequest) returns (google.protobuf.Empty);
+}
+

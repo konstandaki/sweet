@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+import "tv_service/user_stream.proto";
+
+message UserStreamData {
+    repeated UserStream user_stream = 1;
+}

@@ -1,0 +1,918 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "authentication_service_v2/authentication_service.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "AuthenticationService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/AuthenticationService/Exchange": {
+      "post": {
+        "operationId": "AuthenticationService_Exchange",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2ExchangeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2ExchangeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    },
+    "/AuthenticationService/Exchange.json": {
+      "post": {
+        "operationId": "AuthenticationService_Exchange2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2ExchangeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2ExchangeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    },
+    "/AuthenticationService/ExchangeOneTimeToken.json": {
+      "post": {
+        "summary": "ExchangeOneTimeToken is designed to be used internally",
+        "operationId": "AuthenticationService_ExchangeOneTimeToken",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2ExchangeOneTimeTokenResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2ExchangeOneTimeTokenRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    },
+    "/AuthenticationService/GetAvailableMethods": {
+      "post": {
+        "operationId": "AuthenticationService_GetAvailableMethods",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2GetAvailableMethodsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2GetAvailableMethodsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    },
+    "/AuthenticationService/GetAvailableMethods.json": {
+      "post": {
+        "operationId": "AuthenticationService_GetAvailableMethods2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2GetAvailableMethodsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2GetAvailableMethodsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    },
+    "/AuthenticationService/Issue": {
+      "post": {
+        "operationId": "AuthenticationService_Issue",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2IssueResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2IssueRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    },
+    "/AuthenticationService/Issue.json": {
+      "post": {
+        "operationId": "AuthenticationService_Issue2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2IssueResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2IssueRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    },
+    "/AuthenticationService/Revoke": {
+      "post": {
+        "operationId": "AuthenticationService_Revoke",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2RevokeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2RevokeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    },
+    "/AuthenticationService/Revoke.json": {
+      "post": {
+        "operationId": "AuthenticationService_Revoke2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2RevokeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2RevokeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    },
+    "/AuthenticationService/Token": {
+      "post": {
+        "operationId": "AuthenticationService_Token",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2TokenResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2TokenRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    },
+    "/AuthenticationService/Token.json": {
+      "post": {
+        "operationId": "AuthenticationService_Token2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2TokenResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authentication_service_v2TokenRequest"
+            }
+          }
+        ],
+        "tags": [
+          "AuthenticationService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "ApplicationInfoApplicationType": {
+      "type": "string",
+      "enum": [
+        "AT_Unknown",
+        "AT_TRINITY_Player",
+        "AT_SWEET_TV_Player",
+        "AT_CACTUS_Player",
+        "AT_Alpha_IP",
+        "AT_GRIZLI_Player",
+        "AT_Bravis_TV_Player",
+        "AT_Startelecom_TV",
+        "AT_Apelsin",
+        "AT_IMPERIAL_TV",
+        "AT_AIWA",
+        "AT_Kahovka",
+        "AT_VODAFONE_TV",
+        "AT_DiaNet",
+        "AT_Kopeika",
+        "AT_RNet",
+        "AT_HISENSE",
+        "AT_UA_CITY",
+        "AT_Enlider",
+        "AT_Bestlink",
+        "AT_Streamnetwork",
+        "AT_Homenet",
+        "AT_NetZahid"
+      ],
+      "default": "AT_Unknown"
+    },
+    "DeviceInfoAspectRatio": {
+      "type": "string",
+      "enum": [
+        "AR_Unknown",
+        "AR_9_16",
+        "AR_3_4",
+        "AR_9_18",
+        "AR_9_21",
+        "AR_18_39",
+        "AR_16_9",
+        "AR_8_13"
+      ],
+      "default": "AR_Unknown"
+    },
+    "DeviceInfoDeviceScreenInfo": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "aspectRatio": {
+          "$ref": "#/definitions/DeviceInfoAspectRatio"
+        }
+      }
+    },
+    "DeviceInfoDeviceSubType": {
+      "type": "string",
+      "enum": [
+        "DST_Unknown",
+        "DST_LG",
+        "DST_SAMSUNG",
+        "DST_PHILIPS",
+        "DST_TOSHIBA",
+        "DST_INEXT",
+        "DST_INFOMIR",
+        "DST_KIVI",
+        "DST_NOMI",
+        "DST_ERGO",
+        "DST_VESTEL",
+        "DST_VEWD",
+        "DST_FOXXUM",
+        "DST_ZEASN",
+        "DST_SONY",
+        "DST_ROMSAT",
+        "DST_SAMSUNG_MOBILE",
+        "DST_AIWA",
+        "DST_LIBERTON",
+        "DST_HUAWEI_MOBILE",
+        "DST_PRESET_APP",
+        "DST_COMFY_STORE",
+        "DST_PANASONIC",
+        "DST_ARCELIK",
+        "DST_HISENSE",
+        "DST_OZONE_HD",
+        "DST_FIRE_TV",
+        "DST_REALME",
+        "DST_GAZER",
+        "DST_TLC",
+        "DST_TCL",
+        "DST_ORSAY",
+        "DST_OUR_SERVER",
+        "DST_COOLITA",
+        "DST_SATELLITE"
+      ],
+      "default": "DST_Unknown"
+    },
+    "DeviceInfoDeviceType": {
+      "type": "string",
+      "enum": [
+        "DT_Unknown",
+        "DT_DIB_120",
+        "DT_IPTV_Player",
+        "DT_MAG200",
+        "DT_MAG250_Micro",
+        "DT_MAG250_Mini",
+        "DT_Himedia_HD600A",
+        "DT_Android_Player",
+        "DT_STB_Emul",
+        "DT_SmartTV",
+        "DT_iNext",
+        "DT_M3U",
+        "DT_AndroidTV",
+        "DT_IOS_Player",
+        "DT_MacOS_Player",
+        "DT_Kivi_TV",
+        "DT_GX_STB",
+        "DT_NOMI_TV",
+        "DT_Web_Browser",
+        "DT_ERGO_TV",
+        "DT_AppleTV",
+        "DT_Xbox"
+      ],
+      "default": "DT_Unknown"
+    },
+    "DeviceInfoFirmwareInfo": {
+      "type": "object",
+      "properties": {
+        "versionCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "versionString": {
+          "type": "string"
+        },
+        "modules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DeviceInfoFirmwareModule"
+          }
+        }
+      }
+    },
+    "DeviceInfoFirmwareModule": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "versionCode": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "DeviceInfoNetworkConnectionType": {
+      "type": "string",
+      "enum": [
+        "NCT_Unknown",
+        "NCT_Ethernet",
+        "NCT_WiFi",
+        "NCT_Cellular"
+      ],
+      "default": "NCT_Unknown"
+    },
+    "DeviceInfoSupportedDRM": {
+      "type": "object",
+      "properties": {
+        "aes128": {
+          "type": "boolean"
+        },
+        "widevineModular": {
+          "type": "boolean"
+        },
+        "widevineClassic": {
+          "type": "boolean"
+        },
+        "playReady": {
+          "type": "boolean"
+        },
+        "fairPlay": {
+          "type": "boolean"
+        }
+      }
+    },
+    "DeviceInfoSystemInfo": {
+      "type": "object",
+      "properties": {
+        "networkConnectionType": {
+          "$ref": "#/definitions/DeviceInfoNetworkConnectionType"
+        },
+        "osVersion": {
+          "type": "string"
+        },
+        "totalMemory": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "hardware": {
+          "type": "string"
+        }
+      }
+    },
+    "applicationApplicationInfo": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/ApplicationInfoApplicationType"
+        }
+      }
+    },
+    "authentication_service_v2AuthMethod": {
+      "type": "string",
+      "enum": [
+        "METHOD_UNSPECIFIED",
+        "LEGACY",
+        "OTP",
+        "SIGNIN_CODE",
+        "OAUTH",
+        "ISP_CODE",
+        "EMAIL",
+        "EXCHANGEABLE_ONE_TIME_TOKEN"
+      ],
+      "default": "METHOD_UNSPECIFIED"
+    },
+    "authentication_service_v2CreateOneTimeTokenResponse": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "expiresIn": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "authentication_service_v2ExchangeOneTimeTokenRequest": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "device": {
+          "$ref": "#/definitions/deviceDeviceInfo"
+        },
+        "ipAddress": {
+          "type": "string"
+        }
+      }
+    },
+    "authentication_service_v2ExchangeOneTimeTokenResponse": {
+      "type": "object",
+      "properties": {
+        "refreshToken": {
+          "type": "string"
+        },
+        "accessToken": {
+          "type": "string"
+        },
+        "expiresIn": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "authentication_service_v2ExchangeRequest": {
+      "type": "object",
+      "properties": {
+        "authToken": {
+          "type": "string"
+        }
+      }
+    },
+    "authentication_service_v2ExchangeResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/authentication_service_v2ExchangeResponseResult"
+        },
+        "refreshToken": {
+          "type": "string"
+        },
+        "accessToken": {
+          "type": "string"
+        },
+        "expiresIn": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "authentication_service_v2ExchangeResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "ERROR"
+      ],
+      "default": "OK"
+    },
+    "authentication_service_v2GetAvailableMethodsRequest": {
+      "type": "object",
+      "properties": {
+        "device": {
+          "$ref": "#/definitions/deviceDeviceInfo"
+        }
+      }
+    },
+    "authentication_service_v2GetAvailableMethodsResponse": {
+      "type": "object",
+      "properties": {
+        "methods": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/authentication_service_v2AuthMethod"
+          }
+        },
+        "providers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/authentication_service_v2OAuthProvider"
+          }
+        }
+      }
+    },
+    "authentication_service_v2IssueRequest": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "device": {
+          "$ref": "#/definitions/deviceDeviceInfo"
+        },
+        "ipAddress": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "method": {
+          "$ref": "#/definitions/authentication_service_v2AuthMethod"
+        },
+        "provider": {
+          "$ref": "#/definitions/authentication_service_v2OAuthProvider"
+        },
+        "platform": {
+          "$ref": "#/definitions/authentication_service_v2OAuthPlatform"
+        },
+        "oauthRefreshToken": {
+          "type": "string"
+        },
+        "oauthClientId": {
+          "type": "string"
+        },
+        "profileId": {
+          "type": "string"
+        },
+        "billingId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "authentication_service_v2IssueResponse": {
+      "type": "object",
+      "properties": {
+        "refreshToken": {
+          "type": "string"
+        },
+        "accessToken": {
+          "type": "string"
+        },
+        "expiresIn": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "authentication_service_v2OAuthPlatform": {
+      "type": "string",
+      "enum": [
+        "PLATFORM_UNSPECIFIED",
+        "WEB",
+        "ANDROID",
+        "IOS",
+        "IOT_DEVICES"
+      ],
+      "default": "PLATFORM_UNSPECIFIED"
+    },
+    "authentication_service_v2OAuthProvider": {
+      "type": "string",
+      "enum": [
+        "GOOGLE",
+        "FACEBOOK",
+        "APPLE",
+        "SWEET_TV",
+        "PROVIDER_UNKNOWN"
+      ],
+      "default": "GOOGLE"
+    },
+    "authentication_service_v2RevokeRequest": {
+      "type": "object",
+      "properties": {
+        "refreshToken": {
+          "type": "string"
+        },
+        "accessToken": {
+          "type": "string"
+        }
+      }
+    },
+    "authentication_service_v2RevokeResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/authentication_service_v2RevokeResponseResult"
+        }
+      }
+    },
+    "authentication_service_v2RevokeResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "ERROR"
+      ],
+      "default": "OK"
+    },
+    "authentication_service_v2TokenRequest": {
+      "type": "object",
+      "properties": {
+        "refreshToken": {
+          "type": "string"
+        },
+        "device": {
+          "$ref": "#/definitions/deviceDeviceInfo"
+        },
+        "profileId": {
+          "type": "string"
+        }
+      }
+    },
+    "authentication_service_v2TokenResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/authentication_service_v2TokenResponseResult"
+        },
+        "accessToken": {
+          "type": "string"
+        },
+        "expiresIn": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "authentication_service_v2TokenResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "ERROR"
+      ],
+      "default": "OK"
+    },
+    "deviceDeviceInfo": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/DeviceInfoDeviceType"
+        },
+        "mac": {
+          "type": "string"
+        },
+        "firmware": {
+          "$ref": "#/definitions/DeviceInfoFirmwareInfo"
+        },
+        "subType": {
+          "$ref": "#/definitions/DeviceInfoDeviceSubType"
+        },
+        "model": {
+          "type": "string"
+        },
+        "uuid": {
+          "type": "string"
+        },
+        "screenInfo": {
+          "$ref": "#/definitions/DeviceInfoDeviceScreenInfo"
+        },
+        "application": {
+          "$ref": "#/definitions/applicationApplicationInfo"
+        },
+        "vendor": {
+          "type": "string"
+        },
+        "supportedDrm": {
+          "$ref": "#/definitions/DeviceInfoSupportedDRM"
+        },
+        "guid": {
+          "type": "string"
+        },
+        "system": {
+          "type": "string"
+        },
+        "systemInfo": {
+          "$ref": "#/definitions/DeviceInfoSystemInfo"
+        },
+        "isNotSupported4K": {
+          "type": "boolean"
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    }
+  }
+}

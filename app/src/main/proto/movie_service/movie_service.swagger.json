@@ -1,0 +1,6520 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "movie_service/movie_service.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "MovieService"
+    },
+    {
+      "name": "InternalMovieService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/MovieServerService/AddFavoriteMovie": {
+      "post": {
+        "operationId": "MovieService_AddFavoriteMovie3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceAddFavoriteMovieResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceAddFavoriteMovieRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/AddFavoriteMovie.json": {
+      "post": {
+        "operationId": "MovieService_AddFavoriteMovie5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceAddFavoriteMovieResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceAddFavoriteMovieRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/AddFavoriteMovie.pb": {
+      "post": {
+        "operationId": "MovieService_AddFavoriteMovie4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceAddFavoriteMovieResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceAddFavoriteMovieRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/ClearWatchInfo": {
+      "post": {
+        "operationId": "MovieService_ClearWatchInfo3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceClearWatchInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceClearWatchInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/ClearWatchInfo.json": {
+      "post": {
+        "operationId": "MovieService_ClearWatchInfo5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceClearWatchInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceClearWatchInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/ClearWatchInfo.pb": {
+      "post": {
+        "operationId": "MovieService_ClearWatchInfo4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceClearWatchInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceClearWatchInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetCollectionMovies": {
+      "post": {
+        "operationId": "MovieService_GetCollectionMovies3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetCollectionMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetCollectionMovies5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetCollectionMovies.pb": {
+      "post": {
+        "operationId": "MovieService_GetCollectionMovies4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetCollections": {
+      "post": {
+        "operationId": "MovieService_GetCollections3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetCollections.json": {
+      "post": {
+        "operationId": "MovieService_GetCollections5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetCollections.pb": {
+      "post": {
+        "operationId": "MovieService_GetCollections4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetConfiguration": {
+      "post": {
+        "operationId": "MovieService_GetConfiguration3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetConfigurationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetConfigurationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetConfiguration.json": {
+      "post": {
+        "operationId": "MovieService_GetConfiguration5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetConfigurationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetConfigurationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetConfiguration.pb": {
+      "post": {
+        "operationId": "MovieService_GetConfiguration4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetConfigurationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetConfigurationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetDownloadableMovies": {
+      "post": {
+        "operationId": "MovieService_GetDownloadableMovies3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetDownloadableMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetDownloadableMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetDownloadableMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetDownloadableMovies5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetDownloadableMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetDownloadableMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetDownloadableMovies.pb": {
+      "post": {
+        "operationId": "MovieService_GetDownloadableMovies4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetDownloadableMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetDownloadableMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetFavoriteMovies": {
+      "post": {
+        "operationId": "MovieService_GetFavoriteMovies3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFavoriteMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFavoriteMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetFavoriteMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetFavoriteMovies5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFavoriteMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFavoriteMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetFavoriteMovies.pb": {
+      "post": {
+        "operationId": "MovieService_GetFavoriteMovies4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFavoriteMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFavoriteMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetGenreMovies": {
+      "post": {
+        "operationId": "MovieService_GetGenreMovies3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetGenreMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetGenreMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetGenreMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetGenreMovies5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetGenreMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetGenreMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetGenreMovies.pb": {
+      "post": {
+        "operationId": "MovieService_GetGenreMovies4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetGenreMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetGenreMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetLink": {
+      "post": {
+        "operationId": "MovieService_GetLink3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetLinkResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetLinkRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetLink.json": {
+      "post": {
+        "operationId": "MovieService_GetLink5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetLinkResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetLinkRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetLink.pb": {
+      "post": {
+        "operationId": "MovieService_GetLink4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetLinkResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetLinkRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetMovieInfo": {
+      "post": {
+        "operationId": "MovieService_GetMovieInfo3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetMovieInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetMovieInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetMovieInfo.json": {
+      "post": {
+        "operationId": "MovieService_GetMovieInfo5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetMovieInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetMovieInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetMovieInfo.pb": {
+      "post": {
+        "operationId": "MovieService_GetMovieInfo4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetMovieInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetMovieInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPersonInfo": {
+      "post": {
+        "operationId": "MovieService_GetPersonInfo3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPersonInfo.json": {
+      "post": {
+        "operationId": "MovieService_GetPersonInfo5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPersonInfo.pb": {
+      "post": {
+        "operationId": "MovieService_GetPersonInfo4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPersonsInfo": {
+      "post": {
+        "operationId": "MovieService_GetPersonsInfo3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonsInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonsInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPersonsInfo.json": {
+      "post": {
+        "operationId": "MovieService_GetPersonsInfo5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonsInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonsInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPersonsInfo.pb": {
+      "post": {
+        "operationId": "MovieService_GetPersonsInfo4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonsInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonsInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPremiereMovies": {
+      "post": {
+        "operationId": "MovieService_GetPremiereMovies3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPremiereMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetPremiereMovies5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPremiereMovies.pb": {
+      "post": {
+        "operationId": "MovieService_GetPremiereMovies4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPurchasedMovies": {
+      "post": {
+        "operationId": "MovieService_GetPurchasedMovies3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPurchasedMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPurchasedMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPurchasedMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetPurchasedMovies5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPurchasedMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPurchasedMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetPurchasedMovies.pb": {
+      "post": {
+        "operationId": "MovieService_GetPurchasedMovies4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPurchasedMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPurchasedMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetRecommendedMovies": {
+      "post": {
+        "operationId": "MovieService_GetRecommendedMovies3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendedMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendedMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetRecommendedMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetRecommendedMovies5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendedMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendedMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetRecommendedMovies.pb": {
+      "post": {
+        "operationId": "MovieService_GetRecommendedMovies4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendedMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendedMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetWatchList": {
+      "post": {
+        "operationId": "MovieService_GetWatchList3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetWatchListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetWatchListRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetWatchList.json": {
+      "post": {
+        "operationId": "MovieService_GetWatchList5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetWatchListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetWatchListRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/GetWatchList.pb": {
+      "post": {
+        "operationId": "MovieService_GetWatchList4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetWatchListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetWatchListRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/RemoveFavoriteMovie": {
+      "post": {
+        "operationId": "MovieService_RemoveFavoriteMovie3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/RemoveFavoriteMovie.json": {
+      "post": {
+        "operationId": "MovieService_RemoveFavoriteMovie5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/RemoveFavoriteMovie.pb": {
+      "post": {
+        "operationId": "MovieService_RemoveFavoriteMovie4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/SetWatchInfo": {
+      "post": {
+        "operationId": "MovieService_SetWatchInfo3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceSetWatchInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceSetWatchInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/SetWatchInfo.json": {
+      "post": {
+        "operationId": "MovieService_SetWatchInfo5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceSetWatchInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceSetWatchInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieServerService/SetWatchInfo.pb": {
+      "post": {
+        "operationId": "MovieService_SetWatchInfo4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceSetWatchInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceSetWatchInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/AddFavoriteMovie": {
+      "post": {
+        "operationId": "MovieService_AddFavoriteMovie",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceAddFavoriteMovieResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceAddFavoriteMovieRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/AddFavoriteMovie.json": {
+      "post": {
+        "operationId": "MovieService_AddFavoriteMovie2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceAddFavoriteMovieResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceAddFavoriteMovieRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/ClearWatchInfo": {
+      "post": {
+        "operationId": "MovieService_ClearWatchInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceClearWatchInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceClearWatchInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/ClearWatchInfo.json": {
+      "post": {
+        "operationId": "MovieService_ClearWatchInfo2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceClearWatchInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceClearWatchInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/DeleteComment": {
+      "post": {
+        "operationId": "MovieService_DeleteComment",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceDeleteCommentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceDeleteCommentRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/DeleteComment.json": {
+      "post": {
+        "operationId": "MovieService_DeleteComment2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceDeleteCommentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceDeleteCommentRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/EditComment": {
+      "post": {
+        "operationId": "MovieService_EditComment",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceEditCommentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceEditCommentRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/EditComment.json": {
+      "post": {
+        "operationId": "MovieService_EditComment2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceEditCommentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceEditCommentRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetCollectionMovies": {
+      "post": {
+        "operationId": "MovieService_GetCollectionMovies",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetCollectionMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetCollectionMovies2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetCollections": {
+      "post": {
+        "operationId": "MovieService_GetCollections",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetCollections.json": {
+      "post": {
+        "operationId": "MovieService_GetCollections2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetCollectionsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetConfiguration": {
+      "post": {
+        "operationId": "MovieService_GetConfiguration",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetConfigurationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetConfigurationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetConfiguration.json": {
+      "post": {
+        "operationId": "MovieService_GetConfiguration2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetConfigurationResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetConfigurationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetDownloadableMovies": {
+      "post": {
+        "operationId": "MovieService_GetDownloadableMovies",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetDownloadableMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetDownloadableMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetDownloadableMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetDownloadableMovies2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetDownloadableMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetDownloadableMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetFavoriteMovies": {
+      "post": {
+        "operationId": "MovieService_GetFavoriteMovies",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFavoriteMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFavoriteMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetFavoriteMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetFavoriteMovies2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFavoriteMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFavoriteMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetFilterOption": {
+      "post": {
+        "operationId": "MovieService_GetFilterOption",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFilterOptionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFilterOptionRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetFilterOption.json": {
+      "post": {
+        "operationId": "MovieService_GetFilterOption2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFilterOptionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFilterOptionRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetFilteredMovies": {
+      "post": {
+        "operationId": "MovieService_GetFilteredMovies",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFilteredMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFilteredMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetFilteredMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetFilteredMovies2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFilteredMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFilteredMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetFilters": {
+      "post": {
+        "operationId": "MovieService_GetFilters",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFiltersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFiltersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetFilters.json": {
+      "post": {
+        "operationId": "MovieService_GetFilters2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFiltersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetFiltersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetGenreMovies": {
+      "post": {
+        "operationId": "MovieService_GetGenreMovies",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetGenreMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetGenreMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetGenreMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetGenreMovies2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetGenreMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetGenreMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetLink": {
+      "post": {
+        "operationId": "MovieService_GetLink",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetLinkResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetLinkRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetLink.json": {
+      "post": {
+        "operationId": "MovieService_GetLink2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetLinkResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetLinkRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetMovieInfo": {
+      "post": {
+        "operationId": "MovieService_GetMovieInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetMovieInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetMovieInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetMovieInfo.json": {
+      "post": {
+        "operationId": "MovieService_GetMovieInfo2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetMovieInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetMovieInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPersonInfo": {
+      "post": {
+        "operationId": "MovieService_GetPersonInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPersonInfo.json": {
+      "post": {
+        "operationId": "MovieService_GetPersonInfo2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPersonsInfo": {
+      "post": {
+        "operationId": "MovieService_GetPersonsInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonsInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonsInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPersonsInfo.json": {
+      "post": {
+        "operationId": "MovieService_GetPersonsInfo2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonsInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPersonsInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPremiereBanners": {
+      "post": {
+        "operationId": "MovieService_GetPremiereBanners",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereBannersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereBannersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPremiereBanners.json": {
+      "post": {
+        "operationId": "MovieService_GetPremiereBanners2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereBannersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereBannersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPremiereMovies": {
+      "post": {
+        "operationId": "MovieService_GetPremiereMovies",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPremiereMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetPremiereMovies2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPromoBanners": {
+      "post": {
+        "operationId": "MovieService_GetPromoBanners",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPromoBannersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPromoBannersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPromoBanners.json": {
+      "post": {
+        "operationId": "MovieService_GetPromoBanners2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPromoBannersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPromoBannersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPurchasedMovies": {
+      "post": {
+        "operationId": "MovieService_GetPurchasedMovies",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPurchasedMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPurchasedMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetPurchasedMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetPurchasedMovies2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPurchasedMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPurchasedMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetRecommendations": {
+      "post": {
+        "operationId": "MovieService_GetRecommendations",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendationsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendationsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetRecommendations.json": {
+      "post": {
+        "operationId": "MovieService_GetRecommendations2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendationsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendationsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetRecommendedMovies": {
+      "post": {
+        "operationId": "MovieService_GetRecommendedMovies",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendedMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendedMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetRecommendedMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetRecommendedMovies2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendedMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetRecommendedMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetSubgenreMovies": {
+      "post": {
+        "operationId": "MovieService_GetSubgenreMovies",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetSubgenreMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetSubgenreMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetSubgenreMovies.json": {
+      "post": {
+        "operationId": "MovieService_GetSubgenreMovies2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetSubgenreMoviesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetSubgenreMoviesRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetWatchList": {
+      "post": {
+        "operationId": "MovieService_GetWatchList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetWatchListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetWatchListRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/GetWatchList.json": {
+      "post": {
+        "operationId": "MovieService_GetWatchList2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetWatchListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetWatchListRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/NotifyMovieRelease": {
+      "post": {
+        "operationId": "MovieService_NotifyMovieRelease",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceNotifyMovieReleaseResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceNotifyMovieReleaseRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/NotifyMovieRelease.json": {
+      "post": {
+        "operationId": "MovieService_NotifyMovieRelease2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceNotifyMovieReleaseResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceNotifyMovieReleaseRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/PostComment": {
+      "post": {
+        "operationId": "MovieService_PostComment",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_servicePostCommentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_servicePostCommentRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/PostComment.json": {
+      "post": {
+        "operationId": "MovieService_PostComment2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_servicePostCommentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_servicePostCommentRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/Rate": {
+      "post": {
+        "operationId": "MovieService_Rate",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/Rate.json": {
+      "post": {
+        "operationId": "MovieService_Rate2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/RemoveFavoriteMovie": {
+      "post": {
+        "operationId": "MovieService_RemoveFavoriteMovie",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/RemoveFavoriteMovie.json": {
+      "post": {
+        "operationId": "MovieService_RemoveFavoriteMovie2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/SetWatchInfo": {
+      "post": {
+        "operationId": "MovieService_SetWatchInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceSetWatchInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceSetWatchInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/MovieService/SetWatchInfo.json": {
+      "post": {
+        "operationId": "MovieService_SetWatchInfo2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceSetWatchInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceSetWatchInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/PromoServerService/GetPremiereBanners": {
+      "post": {
+        "operationId": "MovieService_GetPremiereBanners3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereBannersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereBannersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/PromoServerService/GetPremiereBanners.json": {
+      "post": {
+        "operationId": "MovieService_GetPremiereBanners5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereBannersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereBannersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/PromoServerService/GetPremiereBanners.pb": {
+      "post": {
+        "operationId": "MovieService_GetPremiereBanners4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereBannersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPremiereBannersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/PromoServerService/GetPromoBanners": {
+      "post": {
+        "operationId": "MovieService_GetPromoBanners3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPromoBannersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPromoBannersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/PromoServerService/GetPromoBanners.json": {
+      "post": {
+        "operationId": "MovieService_GetPromoBanners5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPromoBannersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPromoBannersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    },
+    "/PromoServerService/GetPromoBanners.pb": {
+      "post": {
+        "operationId": "MovieService_GetPromoBanners4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPromoBannersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/movie_serviceGetPromoBannersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MovieService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "AdMediaType": {
+      "type": "string",
+      "enum": [
+        "VIDEO",
+        "IMAGE"
+      ],
+      "default": "VIDEO"
+    },
+    "MovieOfferOfferType": {
+      "type": "string",
+      "enum": [
+        "Buy",
+        "Rent"
+      ],
+      "default": "Buy"
+    },
+    "PosterDimensions": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "PosterOrientation": {
+      "type": "string",
+      "enum": [
+        "Horizontal",
+        "Vertical"
+      ],
+      "default": "Horizontal"
+    },
+    "RecommendationRecommendationType": {
+      "type": "string",
+      "enum": [
+        "Channel",
+        "Movie"
+      ]
+    },
+    "movie_serviceAd": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "$ref": "#/definitions/movie_serviceAdType"
+        },
+        "mediaType": {
+          "$ref": "#/definitions/AdMediaType"
+        },
+        "contentType": {
+          "$ref": "#/definitions/movie_serviceAdContentType"
+        },
+        "startTime": {
+          "type": "string",
+          "format": "int64"
+        },
+        "skippable": {
+          "type": "boolean"
+        },
+        "skipOffset": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "contentUrl": {
+          "type": "string"
+        },
+        "contentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "vastUrl": {
+          "type": "string"
+        },
+        "order": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "categoryId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceAdContentType": {
+      "type": "string",
+      "enum": [
+        "Movie",
+        "Channel",
+        "General"
+      ],
+      "default": "Movie"
+    },
+    "movie_serviceAdType": {
+      "type": "string",
+      "enum": [
+        "PREROLL",
+        "MIDROLL",
+        "POSTROLL"
+      ],
+      "default": "PREROLL"
+    },
+    "movie_serviceAddFavoriteMovieRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "movieId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceAddFavoriteMovieResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceAddFavoriteMovieResponseResult"
+        }
+      }
+    },
+    "movie_serviceAddFavoriteMovieResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceAudioTrack": {
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "language": {
+          "type": "string"
+        },
+        "soundScheme": {
+          "type": "string"
+        },
+        "isoCode": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceBannerResolution": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "width": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceCabSection": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "$ref": "#/definitions/movie_serviceCabSectionType"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceCabSectionItem"
+          }
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceCabSectionItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "$ref": "#/definitions/movie_serviceCabSectionItemType"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceCabSectionItemType": {
+      "type": "string",
+      "enum": [
+        "BalanceTopUpButton",
+        "BalanceInfo",
+        "UserIDInfo",
+        "PaymentInfo",
+        "TariffInfo",
+        "StatusInfo",
+        "ServicesInfo",
+        "Promotions",
+        "PromoCodes",
+        "InviteFriend",
+        "PurchaseSetTopBox",
+        "SubscriptionSettings",
+        "PayAccountUUIDSettings",
+        "PayYourTariffButton"
+      ],
+      "default": "BalanceTopUpButton",
+      "title": "- BalanceTopUpButton: PersonalData\n - Promotions: Promo\n - SubscriptionSettings: Settings\n - PayYourTariffButton: PersonalData"
+    },
+    "movie_serviceCabSectionType": {
+      "type": "string",
+      "enum": [
+        "PersonalData",
+        "Promo",
+        "Tariffs",
+        "Services",
+        "ParentalControl",
+        "Settings"
+      ],
+      "default": "PersonalData"
+    },
+    "movie_serviceCategory": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceClearWatchInfoRequest": {
+      "type": "object"
+    },
+    "movie_serviceClearWatchInfoResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/movie_serviceClearWatchInfoResponseResult"
+        }
+      }
+    },
+    "movie_serviceClearWatchInfoResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceCollection": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/movie_serviceCollectionType"
+        },
+        "idList": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "slug": {
+          "type": "string"
+        },
+        "itemList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceCollectionItem"
+          }
+        },
+        "collectionList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceCollection"
+          }
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "darkThemeImageUrl": {
+          "type": "string"
+        },
+        "action": {
+          "$ref": "#/definitions/movie_servicePromoBannerAction"
+        },
+        "closable": {
+          "type": "boolean"
+        },
+        "secondaryIdList": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_serviceCollectionItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "secondaryId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "genres": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "availableIn": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceCollectionType": {
+      "type": "string",
+      "enum": [
+        "Movie",
+        "Channel",
+        "Genre",
+        "Subgenre",
+        "Epg",
+        "Collection",
+        "Banner",
+        "Person",
+        "TvShow"
+      ],
+      "default": "Movie"
+    },
+    "movie_serviceComment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "author": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "editable": {
+          "type": "boolean"
+        },
+        "delible": {
+          "type": "boolean"
+        },
+        "statistics": {
+          "$ref": "#/definitions/movie_serviceStatistics"
+        },
+        "userRating": {
+          "$ref": "#/definitions/movie_serviceRating"
+        },
+        "replies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceComment"
+          }
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "rating": {
+          "type": "number",
+          "format": "float"
+        }
+      }
+    },
+    "movie_serviceCountry": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceDRMType": {
+      "type": "string",
+      "enum": [
+        "DRM_NONE",
+        "DRM_AES",
+        "DRM_WIDEVINE",
+        "DRM_PLAYREADY",
+        "DRM_FAIRPLAY"
+      ],
+      "default": "DRM_NONE"
+    },
+    "movie_serviceDeleteCommentRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "commentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "movieId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceDeleteCommentResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceDeleteCommentResponseResult"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceDeleteCommentResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth",
+        "Error"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceEditCommentRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "commentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceEditCommentResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceEditCommentResponseResult"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceEditCommentResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth",
+        "Error"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceEpisode": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "externalId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "watchInfo": {
+          "$ref": "#/definitions/movie_serviceWatchInfo"
+        },
+        "previewUrl": {
+          "type": "string"
+        },
+        "endCredits": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "audioTracks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceAudioTrack"
+          }
+        },
+        "subtitles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceSubtitle"
+          }
+        },
+        "startLoadingScreen": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "endLoadingScreen": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceExternalIdPair": {
+      "type": "object",
+      "properties": {
+        "ownerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "externalId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "preferred": {
+          "type": "boolean"
+        }
+      }
+    },
+    "movie_serviceFilter": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "typeId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "genreId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "countryId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "order": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "text": {
+          "type": "string"
+        },
+        "yearFrom": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "yearTill": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "audioTrackLanguageId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "categoryId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "subtitleLanguageId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceFilterGroup": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/movie_serviceFilterGroupType"
+        },
+        "title": {
+          "type": "string"
+        },
+        "filters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceFilter"
+          }
+        }
+      }
+    },
+    "movie_serviceFilterGroupType": {
+      "type": "string",
+      "enum": [
+        "Genre",
+        "Downloadable",
+        "Year",
+        "Country",
+        "Available",
+        "Audiotrack",
+        "Owner",
+        "Category",
+        "Subtitle"
+      ],
+      "default": "Genre"
+    },
+    "movie_serviceFilterOption": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "filters": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "slug": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceGenre": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "iconUrl": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "bannerUrl": {
+          "type": "string"
+        },
+        "iconV2Url": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceGetAllMoviesInfoResponse": {
+      "type": "object",
+      "properties": {
+        "movies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceMovie"
+          }
+        }
+      }
+    },
+    "movie_serviceGetCollectionMoviesRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "collectionId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "includeHidden": {
+          "type": "boolean"
+        }
+      }
+    },
+    "movie_serviceGetCollectionMoviesResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/movie_serviceGetCollectionMoviesResponseResult"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceGetCollectionMoviesResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetCollectionsRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/movie_serviceGetCollectionsRequestType"
+        }
+      }
+    },
+    "movie_serviceGetCollectionsRequestType": {
+      "type": "string",
+      "enum": [
+        "HOME",
+        "MOVIE",
+        "PREMIERE",
+        "SERIES",
+        "CARTOON",
+        "TV"
+      ],
+      "default": "HOME"
+    },
+    "movie_serviceGetCollectionsResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/movie_serviceGetCollectionsResponseResult"
+        },
+        "collection": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceCollection"
+          }
+        }
+      }
+    },
+    "movie_serviceGetCollectionsResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetConfigurationRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceGetConfigurationResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/movie_serviceGetConfigurationResponseResult"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceCategory"
+          }
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceCountry"
+          }
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceGenre"
+          }
+        },
+        "owners": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceOwner"
+          }
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceRole"
+          }
+        },
+        "collections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceCollection"
+          }
+        },
+        "sortModes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceSortMode"
+          }
+        },
+        "subgenres": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceSubgenre"
+          }
+        },
+        "videoQualities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceVideoQuality"
+          }
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceLanguage"
+          }
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceSection"
+          }
+        },
+        "bannerResolutions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceBannerResolution"
+          }
+        },
+        "screensaverAnimations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cabSections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceCabSection"
+          }
+        }
+      }
+    },
+    "movie_serviceGetConfigurationResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetDownloadableMoviesRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceGetDownloadableMoviesResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetDownloadableMoviesResponseResult"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_serviceGetDownloadableMoviesResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetFavoriteMoviesRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceGetFavoriteMoviesResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetFavoriteMoviesResponseResult"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_serviceGetFavoriteMoviesResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetFilterOptionRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "filterOptionId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceGetFilterOptionResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetFilterOptionResponseResult"
+        },
+        "filterOption": {
+          "$ref": "#/definitions/movie_serviceFilterOption"
+        }
+      }
+    },
+    "movie_serviceGetFilterOptionResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetFilteredMoviesRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "filters": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "sortModeId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceGetFilteredMoviesResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetFilteredMoviesResponseResult"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_serviceGetFilteredMoviesResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetFiltersRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "selectedFilters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceFilterGroup"
+          }
+        },
+        "selectedGroup": {
+          "$ref": "#/definitions/movie_serviceFilterGroupType"
+        },
+        "needSortModes": {
+          "type": "boolean"
+        }
+      }
+    },
+    "movie_serviceGetFiltersResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetFiltersResponseResult"
+        },
+        "filters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceFilterGroup"
+          }
+        },
+        "activeFilters": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "sortModes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceSortMode"
+          }
+        }
+      }
+    },
+    "movie_serviceGetFiltersResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetGenreMoviesRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "genreId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceGetGenreMoviesResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/movie_serviceGetGenreMoviesResponseResult"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_serviceGetGenreMoviesResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetLinkRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "movieId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ownerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "episodeId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sessionId": {
+          "type": "string"
+        },
+        "audioTrack": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "preferredLinkType": {
+          "$ref": "#/definitions/movie_serviceLinkType"
+        },
+        "previewMode": {
+          "type": "boolean"
+        },
+        "pinCode": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceGetLinkResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetLinkResponseResult"
+        },
+        "url": {
+          "type": "string"
+        },
+        "ads": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceAd"
+          }
+        },
+        "adTagUrl": {
+          "type": "string"
+        },
+        "linkType": {
+          "$ref": "#/definitions/movie_serviceLinkType"
+        },
+        "drmType": {
+          "$ref": "#/definitions/movie_serviceDRMType"
+        },
+        "licenseServerUrl": {
+          "type": "string"
+        },
+        "thumbnails": {
+          "$ref": "#/definitions/movie_serviceThumbnails"
+        },
+        "mesh": {
+          "type": "boolean"
+        },
+        "contentKey": {
+          "type": "string"
+        },
+        "subtitles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceSubtitle"
+          }
+        }
+      }
+    },
+    "movie_serviceGetLinkResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth",
+        "ExternalError",
+        "NotFound",
+        "NeedDRM",
+        "CodeInvalid"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetMovieInfoRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "offset": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "needExtendedInfo": {
+          "type": "boolean"
+        },
+        "sortModeId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "needBundleOffers": {
+          "type": "boolean"
+        }
+      }
+    },
+    "movie_serviceGetMovieInfoResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/movie_serviceGetMovieInfoResponseResult"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceMovie"
+          }
+        }
+      }
+    },
+    "movie_serviceGetMovieInfoResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetPersonInfoRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "personId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceGetPersonInfoResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetPersonInfoResponseResult"
+        },
+        "person": {
+          "$ref": "#/definitions/movie_servicePerson"
+        }
+      }
+    },
+    "movie_serviceGetPersonInfoResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetPersonsInfoRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "persons": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_serviceGetPersonsInfoResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetPersonsInfoResponseResult"
+        },
+        "persons": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_servicePerson"
+          }
+        }
+      }
+    },
+    "movie_serviceGetPersonsInfoResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetPremiereBannersRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "page": {
+          "$ref": "#/definitions/movie_servicePage"
+        }
+      }
+    },
+    "movie_serviceGetPremiereBannersResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetPremiereBannersResponseResult"
+        },
+        "banners": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_servicePremiereBanner"
+          }
+        }
+      }
+    },
+    "movie_serviceGetPremiereBannersResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetPremiereMoviesRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceGetPremiereMoviesResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/movie_serviceGetPremiereMoviesResponseResult"
+        },
+        "collection": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_servicePremieresCollection"
+          }
+        }
+      }
+    },
+    "movie_serviceGetPremiereMoviesResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetPromoBannersRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "page": {
+          "$ref": "#/definitions/movie_servicePage"
+        },
+        "needExtendedInfo": {
+          "type": "boolean"
+        }
+      }
+    },
+    "movie_serviceGetPromoBannersResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetPromoBannersResponseResult"
+        },
+        "banners": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_servicePromoBanner"
+          }
+        }
+      }
+    },
+    "movie_serviceGetPromoBannersResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetPurchasedMoviesRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceGetPurchasedMoviesResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetPurchasedMoviesResponseResult"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_serviceGetPurchasedMoviesResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetRecommendationsRequest": {
+      "type": "object"
+    },
+    "movie_serviceGetRecommendationsResponse": {
+      "type": "object",
+      "properties": {
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceRecommendation"
+          }
+        }
+      }
+    },
+    "movie_serviceGetRecommendedMoviesRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceGetRecommendedMoviesResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceGetRecommendedMoviesResponseResult"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_serviceGetRecommendedMoviesResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetSubgenreMoviesRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "subgenreId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceGetSubgenreMoviesResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/movie_serviceGetSubgenreMoviesResponseResult"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_serviceGetSubgenreMoviesResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceGetWatchListRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceGetWatchListResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/movie_serviceGetWatchListResponseResult"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_serviceGetWatchListResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceLanguage": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "iconUrl": {
+          "type": "string"
+        },
+        "isoCode": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceLinkType": {
+      "type": "string",
+      "enum": [
+        "HLS",
+        "DASH",
+        "MSS"
+      ],
+      "default": "HLS"
+    },
+    "movie_serviceMovie": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "externalIdPairs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceExternalIdPair"
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "titleEn": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "duration": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ageLimit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "posterUrl": {
+          "type": "string"
+        },
+        "ratingImdb": {
+          "type": "number",
+          "format": "float"
+        },
+        "ratingKinopoisk": {
+          "type": "number",
+          "format": "float"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "owners": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "people": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_servicePerson"
+          }
+        },
+        "seasons": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceSeason"
+          }
+        },
+        "available": {
+          "type": "boolean"
+        },
+        "tariffs": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "isFavorite": {
+          "type": "boolean"
+        },
+        "watchInfo": {
+          "$ref": "#/definitions/movie_serviceWatchInfo"
+        },
+        "offers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceMovieOffer"
+          }
+        },
+        "posters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_servicePoster"
+          }
+        },
+        "trailerUrl": {
+          "type": "string"
+        },
+        "tagline": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "downloadable": {
+          "type": "boolean"
+        },
+        "recommendedMovies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "audioTracks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceAudioTrack"
+          }
+        },
+        "subtitles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceSubtitle"
+          }
+        },
+        "statistics": {
+          "$ref": "#/definitions/movie_serviceStatistics"
+        },
+        "userRating": {
+          "$ref": "#/definitions/movie_serviceRating"
+        },
+        "bannerUrl": {
+          "type": "string"
+        },
+        "comments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceComment"
+          }
+        },
+        "releaseDate": {
+          "type": "string",
+          "format": "int64"
+        },
+        "released": {
+          "type": "boolean"
+        },
+        "boughtPeriod": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "availabilityInfo": {
+          "type": "string"
+        },
+        "similarMovies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "endCredits": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ratingSweetTv": {
+          "type": "number",
+          "format": "float"
+        },
+        "followingMovies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "videoQuality": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "availabilityInfoColor": {
+          "type": "string"
+        },
+        "channelId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "epgId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceMovieOffer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "offerType": {
+          "$ref": "#/definitions/MovieOfferOfferType"
+        },
+        "videoQuality": {
+          "$ref": "#/definitions/movie_serviceVideoQuality"
+        },
+        "title": {
+          "type": "string"
+        },
+        "offerIcon": {
+          "type": "string"
+        },
+        "period": {
+          "$ref": "#/definitions/movie_servicePeriod"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productId": {
+          "type": "string"
+        },
+        "storeId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "storeStatus": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "discounted": {
+          "type": "boolean"
+        },
+        "originalPrice": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tierId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceNotifyMovieReleaseRequest": {
+      "type": "object",
+      "properties": {
+        "movieId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceNotifyMovieReleaseResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceNotifyMovieReleaseResponseResult"
+        }
+      }
+    },
+    "movie_serviceNotifyMovieReleaseResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NeedEmail"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceOwner": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_servicePage": {
+      "type": "string",
+      "enum": [
+        "HOME",
+        "MOVIE",
+        "PREMIERE",
+        "SERIES",
+        "CARTOON"
+      ],
+      "default": "HOME"
+    },
+    "movie_servicePeriod": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "rentHours": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "watchHours": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_servicePerson": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "nameOriginal": {
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/definitions/movie_serviceRole"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "biography": {
+          "type": "string"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceRole"
+          }
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "bannerUrl": {
+          "type": "string"
+        },
+        "placeOfBirth": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "int64"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "slug": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_servicePostCommentRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "movieId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "parentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_servicePostCommentResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_servicePostCommentResponseResult"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_servicePostCommentResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth",
+        "Error"
+      ],
+      "default": "OK"
+    },
+    "movie_servicePoster": {
+      "type": "object",
+      "properties": {
+        "posterUrl": {
+          "type": "string"
+        },
+        "orientation": {
+          "$ref": "#/definitions/PosterOrientation"
+        },
+        "dimensions": {
+          "$ref": "#/definitions/PosterDimensions"
+        },
+        "blur": {
+          "type": "boolean"
+        }
+      }
+    },
+    "movie_servicePremiereBanner": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "movieId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_servicePremieresCollection": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "movies": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "movie_servicePromoBanner": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "promoBannerAction": {
+          "$ref": "#/definitions/movie_servicePromoBannerAction"
+        },
+        "contentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userTargeted": {
+          "type": "boolean"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "contentTitle": {
+          "type": "string"
+        },
+        "contentTagline": {
+          "type": "string"
+        },
+        "contentRating": {
+          "type": "number",
+          "format": "float"
+        },
+        "contentYear": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "contentCountries": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "contentGenres": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "contentDuration": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "epgId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "url": {
+          "type": "string"
+        },
+        "secondaryContentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sum": {
+          "type": "number",
+          "format": "float"
+        },
+        "contentList": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "contentType": {
+          "$ref": "#/definitions/movie_servicePromoBannerContentType"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_servicePromoBannerImage"
+          }
+        },
+        "ambilightColor": {
+          "type": "string"
+        },
+        "trailerUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_servicePromoBannerAction": {
+      "type": "string",
+      "enum": [
+        "SHOW_CHANNEL",
+        "SHOW_MOVIE",
+        "SHOW_PREMIERE",
+        "SHOW_COLLECTION",
+        "PROPOSE_TARIFF",
+        "PROPOSE_SUBSCRIPTION",
+        "PROPOSE_SERVICE",
+        "PROPOSE_PAYMENT",
+        "ENTER_PROMOCODE",
+        "ENTER_MOVIE_PROMOCODE",
+        "OPEN_WEB_SITE",
+        "RATE_APPLICATION",
+        "INVITE_FRIEND",
+        "BIND_NEW_DEVICE",
+        "OPEN_CHATBOT",
+        "FILL_USER_DATA",
+        "SHOW_INFO",
+        "SHOW_PROMOTIONS",
+        "SIGNUP_USER",
+        "START_TUTORIAL"
+      ],
+      "default": "SHOW_CHANNEL"
+    },
+    "movie_servicePromoBannerContentType": {
+      "type": "string",
+      "enum": [
+        "MOVIE",
+        "CHANNEL"
+      ],
+      "default": "MOVIE"
+    },
+    "movie_servicePromoBannerImage": {
+      "type": "object",
+      "properties": {
+        "resolutionId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceRateRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "rating": {
+          "$ref": "#/definitions/movie_serviceRating"
+        },
+        "movieId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "commentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "accountId": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "movie_serviceRateResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceRateResponseResult"
+        }
+      }
+    },
+    "movie_serviceRateResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceRating": {
+      "type": "string",
+      "enum": [
+        "None",
+        "Like",
+        "Dislike"
+      ],
+      "default": "None"
+    },
+    "movie_serviceRecommendation": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/RecommendationRecommendationType"
+        },
+        "contentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "trailerUrl": {
+          "type": "string"
+        },
+        "secondaryId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceRemoveFavoriteMovieRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "movieId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceRemoveFavoriteMovieResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/movie_serviceRemoveFavoriteMovieResponseResult"
+        }
+      }
+    },
+    "movie_serviceRemoveFavoriteMovieResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceRole": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceSeason": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "episodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/movie_serviceEpisode"
+          }
+        },
+        "ownerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "externalId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceSection": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "$ref": "#/definitions/movie_serviceSectionType"
+        },
+        "title": {
+          "type": "string"
+        },
+        "iconUrl": {
+          "type": "string"
+        },
+        "bannerPage": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "collectionType": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceSectionType": {
+      "type": "string",
+      "enum": [
+        "MAIN",
+        "TV",
+        "CINEMA",
+        "PREMIERES",
+        "SERIES",
+        "CARTOONS",
+        "PROFILE",
+        "CATALOG",
+        "MY_VIDEOS"
+      ],
+      "default": "MAIN"
+    },
+    "movie_serviceSetWatchInfoRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "movieId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "episodeId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "info": {
+          "$ref": "#/definitions/movie_serviceWatchInfo"
+        },
+        "position": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceSetWatchInfoResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/movie_serviceSetWatchInfoResponseResult"
+        }
+      }
+    },
+    "movie_serviceSetWatchInfoResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "movie_serviceSortMode": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "iconUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceStatistics": {
+      "type": "object",
+      "properties": {
+        "likeCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "dislikeCount": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceSubgenre": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "iconUrl": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "bannerUrl": {
+          "type": "string"
+        },
+        "iconV2Url": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceSubtitle": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string"
+        },
+        "isoCode": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "forced": {
+          "type": "boolean"
+        }
+      }
+    },
+    "movie_serviceThumbnails": {
+      "type": "object",
+      "properties": {
+        "imageUrl": {
+          "type": "string"
+        },
+        "playlistUrl": {
+          "type": "string"
+        },
+        "interval": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "cols": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "rows": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "movie_serviceVideoQuality": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "iconUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "movie_serviceWatchInfo": {
+      "type": "object",
+      "properties": {
+        "lastPos": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "lastPosInPercents": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "lastEpisodeId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "lastTime": {
+          "type": "string",
+          "format": "int64"
+        },
+        "referralMovieId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "movieId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "episodeId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    }
+  }
+}

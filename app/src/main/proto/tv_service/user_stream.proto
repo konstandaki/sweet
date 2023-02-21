@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+message UserStream {
+    required int32 id = 1;
+    required int64 first_access_ts = 2;
+    required int64 last_access_ts = 3;
+}

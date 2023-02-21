@@ -1,0 +1,129 @@
+syntax = "proto2";
+
+package device;
+
+option go_package = "gitlab.sweet.tv/proto/device";
+option java_package = "com.ua.mytrinity.tv_client.proto";
+
+import "application/application.proto";
+
+message DeviceInfo {
+    enum Platform {
+        Undefined = 0;
+        Web = 1;
+        Mobile = 2;
+        SmartTV = 3;
+    }
+    enum DeviceType {
+        DT_Unknown = 0;
+        DT_DIB_120 = 1;
+        DT_IPTV_Player = 2;
+        DT_MAG200 = 7;
+        DT_MAG250_Micro = 8;
+        DT_MAG250_Mini = 9;
+        DT_Himedia_HD600A = 10;
+        DT_Android_Player = 11;
+        DT_STB_Emul = 12;
+        DT_SmartTV = 13;
+        DT_iNext = 14;
+        DT_M3U = 15;
+        DT_AndroidTV = 16;
+        DT_IOS_Player = 17;
+        DT_MacOS_Player = 18;
+        DT_Kivi_TV = 19;
+        DT_GX_STB = 20;
+        DT_NOMI_TV = 21;
+        DT_Web_Browser = 22;
+        DT_ERGO_TV = 23;
+        DT_AppleTV = 24;
+        DT_Xbox = 25;
+    }
+    enum DeviceSubType {
+        DST_Unknown = 0;
+        DST_LG = 1;
+        DST_SAMSUNG = 2;
+        DST_PHILIPS = 3;
+        DST_TOSHIBA = 4;
+        DST_INEXT = 5;
+        DST_INFOMIR = 6;
+        DST_KIVI = 7;
+        DST_NOMI = 8;
+        DST_ERGO = 9;
+        DST_VESTEL = 10;
+        DST_VEWD = 11;
+        DST_FOXXUM = 12;
+        DST_ZEASN = 13;
+        DST_SONY = 14;
+        DST_ROMSAT = 15;
+        DST_SAMSUNG_MOBILE = 16;
+        DST_AIWA = 17;
+        DST_LIBERTON = 18;
+	    DST_HUAWEI_MOBILE = 19;
+	    DST_PRESET_APP = 20;
+	    DST_COMFY_STORE = 21;
+        DST_PANASONIC = 22;
+        DST_ARCELIK = 23;
+	    DST_HISENSE = 24;
+	    DST_OZONE_HD = 25;
+        DST_FIRE_TV = 26;
+        DST_REALME = 27;
+        DST_GAZER = 28;
+        DST_TLC = 29;
+        DST_TCL = 30;
+        DST_ORSAY = 31;
+    }
+    enum AspectRatio {
+        AR_Unknown = 0;
+        AR_16_9 = 1;
+        AR_4_3 = 2;
+        AR_18_9 = 3;
+        AR_21_9 = 4;
+        AR_39_18 = 5;
+    }
+    enum NetworkConnectionType {
+        NCT_Unknown = 0;
+        NCT_Ethernet = 1;
+        NCT_WiFi = 2;
+        NCT_Cellular = 3;
+    }
+    message DeviceScreenInfo {
+        required int32 width = 1;
+        required int32 height = 2;
+        optional AspectRatio aspectRatio = 3;
+    }
+    message FirmwareModule {
+        required string name = 1;
+        required int32 versionCode = 2;
+    }
+    message FirmwareInfo {
+        required int32 versionCode = 1;
+        required string versionString = 2;
+        repeated FirmwareModule modules = 3;
+    }
+    message SupportedDRM {
+        optional bool aes_128 = 1;
+        optional bool widevine_modular = 2;
+        optional bool widevine_classic = 3;
+        optional bool play_ready = 4;
+        optional bool fair_play = 5;
+    }
+    message SystemInfo {
+        optional NetworkConnectionType network_connection_type = 1;
+        optional string os_version = 2;
+        optional int32 total_memory = 3;
+        optional string hardware = 4;
+    }
+    required DeviceType type = 1;
+    optional string mac = 2;
+    optional FirmwareInfo firmware = 3;
+    optional DeviceSubType sub_type = 4;
+    optional string model = 5;
+    optional string uuid = 6;
+    optional DeviceScreenInfo screen_info = 7;
+    optional application.ApplicationInfo application = 8;
+    optional string vendor = 9;
+    optional SupportedDRM supported_drm = 10;
+    optional string guid = 11;
+    optional string system = 12;
+    optional SystemInfo system_info = 13;
+}

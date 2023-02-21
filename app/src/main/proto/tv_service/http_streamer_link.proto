@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+message HttpStreamerLink
+{
+    required string link = 1;
+    optional string auth = 2;
+    optional uint32 first_batch_size = 3;
+    optional uint64 valid_until = 4;
+    optional uint32 ip = 5;
+    optional uint64 time_start = 6;
+    optional uint64 time_stop = 7;
+    optional bool   multistream = 8;
+    optional string stream_name = 9;
+    optional uint64 contract_id = 10;
+    optional string locale = 11;
+    optional int32 stream_id = 12;
+}

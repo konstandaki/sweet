@@ -1,0 +1,1438 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "signup_service/signup_service.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "SignupService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/SignupService/Auth": {
+      "post": {
+        "operationId": "SignupService_Auth",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceAuthResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceAuthRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/Auth.json": {
+      "post": {
+        "operationId": "SignupService_Auth2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceAuthResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceAuthRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/AuthCheck": {
+      "post": {
+        "operationId": "SignupService_AuthCheck",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceAuthCheckResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceAuthCheckRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/AuthCheck.json": {
+      "post": {
+        "operationId": "SignupService_AuthCheck2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceAuthCheckResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceAuthCheckRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionSetCode": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionSetCode",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetCodeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetCodeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionSetCode.json": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionSetCode3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetCodeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetCodeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionSetCode.pb": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionSetCode2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetCodeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetCodeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionSetPhone": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionSetPhone",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetPhoneResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetPhoneRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionSetPhone.json": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionSetPhone3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetPhoneResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetPhoneRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionSetPhone.pb": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionSetPhone2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetPhoneResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetPhoneRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionStart": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionStart",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionStartResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionStartRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionStart.json": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionStart3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionStartResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionStartRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionStart.pb": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionStart2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionStartResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionStartRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionUpdate": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionUpdate",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionUpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionUpdateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionUpdate.json": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionUpdate3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionUpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionUpdateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/CodeAuthTransactionUpdate.pb": {
+      "post": {
+        "operationId": "SignupService_CodeAuthTransactionUpdate2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionUpdateResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceCodeAuthTransactionUpdateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/GetPartnerCode": {
+      "post": {
+        "operationId": "SignupService_GetPartnerCode",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceGetPartnerCodeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceGetPartnerCodeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/GetPartnerCode.json": {
+      "post": {
+        "operationId": "SignupService_GetPartnerCode2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceGetPartnerCodeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceGetPartnerCodeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/Logout": {
+      "post": {
+        "operationId": "SignupService_Logout",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceLogoutResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceLogoutRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/Logout.json": {
+      "post": {
+        "operationId": "SignupService_Logout2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceLogoutResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceLogoutRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/SetCode": {
+      "post": {
+        "operationId": "SignupService_SetCode",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceSetCodeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceSetCodeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/SetCode.json": {
+      "post": {
+        "operationId": "SignupService_SetCode2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceSetCodeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceSetCodeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/SetPhone": {
+      "post": {
+        "operationId": "SignupService_SetPhone",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceSetPhoneResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceSetPhoneRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    },
+    "/SignupService/SetPhone.json": {
+      "post": {
+        "operationId": "SignupService_SetPhone2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/signup_serviceSetPhoneResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/signup_serviceSetPhoneRequest"
+            }
+          }
+        ],
+        "tags": [
+          "SignupService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "ApplicationInfoApplicationType": {
+      "type": "string",
+      "enum": [
+        "AT_Unknown",
+        "AT_TRINITY_Player",
+        "AT_SWEET_TV_Player",
+        "AT_CACTUS_Player",
+        "AT_Alpha_IP",
+        "AT_GRIZLI_Player",
+        "AT_Bravis_TV_Player",
+        "AT_Startelecom_TV",
+        "AT_Apelsin",
+        "AT_IMPERIAL_TV",
+        "AT_AIWA",
+        "AT_Kahovka",
+        "AT_VODAFONE_TV",
+        "AT_DiaNet",
+        "AT_Kopeika",
+        "AT_RNet",
+        "AT_HISENSE",
+        "AT_UA_CITY",
+        "AT_Enlider",
+        "AT_Bestlink",
+        "AT_Streamnetwork",
+        "AT_Homenet",
+        "AT_NetZahid"
+      ],
+      "default": "AT_Unknown"
+    },
+    "AuthResponseSignupMethod": {
+      "type": "string",
+      "enum": [
+        "SMS",
+        "AUTO_USER"
+      ],
+      "default": "SMS"
+    },
+    "CodeAuthTransactionStartResponseAuthType": {
+      "type": "string",
+      "enum": [
+        "Code",
+        "SMS"
+      ],
+      "default": "Code"
+    },
+    "DeviceInfoAspectRatio": {
+      "type": "string",
+      "enum": [
+        "AR_Unknown",
+        "AR_16_9",
+        "AR_4_3",
+        "AR_18_9",
+        "AR_21_9",
+        "AR_39_18"
+      ],
+      "default": "AR_Unknown"
+    },
+    "DeviceInfoDeviceScreenInfo": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "aspectRatio": {
+          "$ref": "#/definitions/DeviceInfoAspectRatio"
+        }
+      }
+    },
+    "DeviceInfoDeviceSubType": {
+      "type": "string",
+      "enum": [
+        "DST_Unknown",
+        "DST_LG",
+        "DST_SAMSUNG",
+        "DST_PHILIPS",
+        "DST_TOSHIBA",
+        "DST_INEXT",
+        "DST_INFOMIR",
+        "DST_KIVI",
+        "DST_NOMI",
+        "DST_ERGO",
+        "DST_VESTEL",
+        "DST_VEWD",
+        "DST_FOXXUM",
+        "DST_ZEASN",
+        "DST_SONY",
+        "DST_ROMSAT",
+        "DST_SAMSUNG_MOBILE",
+        "DST_AIWA",
+        "DST_LIBERTON",
+        "DST_HUAWEI_MOBILE",
+        "DST_PRESET_APP",
+        "DST_COMFY_STORE",
+        "DST_PANASONIC",
+        "DST_ARCELIK",
+        "DST_HISENSE",
+        "DST_OZONE_HD",
+        "DST_FIRE_TV",
+        "DST_REALME",
+        "DST_GAZER",
+        "DST_TLC",
+        "DST_TCL",
+        "DST_ORSAY"
+      ],
+      "default": "DST_Unknown"
+    },
+    "DeviceInfoDeviceType": {
+      "type": "string",
+      "enum": [
+        "DT_Unknown",
+        "DT_DIB_120",
+        "DT_IPTV_Player",
+        "DT_MAG200",
+        "DT_MAG250_Micro",
+        "DT_MAG250_Mini",
+        "DT_Himedia_HD600A",
+        "DT_Android_Player",
+        "DT_STB_Emul",
+        "DT_SmartTV",
+        "DT_iNext",
+        "DT_M3U",
+        "DT_AndroidTV",
+        "DT_IOS_Player",
+        "DT_MacOS_Player",
+        "DT_Kivi_TV",
+        "DT_GX_STB",
+        "DT_NOMI_TV",
+        "DT_Web_Browser",
+        "DT_ERGO_TV",
+        "DT_AppleTV",
+        "DT_Xbox"
+      ],
+      "default": "DT_Unknown"
+    },
+    "DeviceInfoFirmwareInfo": {
+      "type": "object",
+      "properties": {
+        "versionCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "versionString": {
+          "type": "string"
+        },
+        "modules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DeviceInfoFirmwareModule"
+          }
+        }
+      }
+    },
+    "DeviceInfoFirmwareModule": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "versionCode": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "DeviceInfoNetworkConnectionType": {
+      "type": "string",
+      "enum": [
+        "NCT_Unknown",
+        "NCT_Ethernet",
+        "NCT_WiFi",
+        "NCT_Cellular"
+      ],
+      "default": "NCT_Unknown"
+    },
+    "DeviceInfoSupportedDRM": {
+      "type": "object",
+      "properties": {
+        "aes128": {
+          "type": "boolean"
+        },
+        "widevineModular": {
+          "type": "boolean"
+        },
+        "widevineClassic": {
+          "type": "boolean"
+        },
+        "playReady": {
+          "type": "boolean"
+        },
+        "fairPlay": {
+          "type": "boolean"
+        }
+      }
+    },
+    "DeviceInfoSystemInfo": {
+      "type": "object",
+      "properties": {
+        "networkConnectionType": {
+          "$ref": "#/definitions/DeviceInfoNetworkConnectionType"
+        },
+        "osVersion": {
+          "type": "string"
+        },
+        "totalMemory": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "hardware": {
+          "type": "string"
+        }
+      }
+    },
+    "applicationApplicationInfo": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/ApplicationInfoApplicationType"
+        }
+      }
+    },
+    "deviceDeviceInfo": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/DeviceInfoDeviceType"
+        },
+        "mac": {
+          "type": "string"
+        },
+        "firmware": {
+          "$ref": "#/definitions/DeviceInfoFirmwareInfo"
+        },
+        "subType": {
+          "$ref": "#/definitions/DeviceInfoDeviceSubType"
+        },
+        "model": {
+          "type": "string"
+        },
+        "uuid": {
+          "type": "string"
+        },
+        "screenInfo": {
+          "$ref": "#/definitions/DeviceInfoDeviceScreenInfo"
+        },
+        "application": {
+          "$ref": "#/definitions/applicationApplicationInfo"
+        },
+        "vendor": {
+          "type": "string"
+        },
+        "supportedDrm": {
+          "$ref": "#/definitions/DeviceInfoSupportedDRM"
+        },
+        "guid": {
+          "type": "string"
+        },
+        "system": {
+          "type": "string"
+        },
+        "systemInfo": {
+          "$ref": "#/definitions/DeviceInfoSystemInfo"
+        }
+      }
+    },
+    "googlerpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "signup_serviceAuthCheckRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        }
+      }
+    },
+    "signup_serviceAuthCheckResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/signup_serviceAuthCheckResponseResult"
+        }
+      }
+    },
+    "signup_serviceAuthCheckResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "signup_serviceAuthRequest": {
+      "type": "object",
+      "properties": {
+        "login": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "device": {
+          "$ref": "#/definitions/deviceDeviceInfo"
+        },
+        "application": {
+          "$ref": "#/definitions/applicationApplicationInfo"
+        },
+        "locale": {
+          "type": "string"
+        }
+      }
+    },
+    "signup_serviceAuthResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/signup_serviceAuthResponseResult"
+        },
+        "authToken": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "companyId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "signupMethod": {
+          "$ref": "#/definitions/AuthResponseSignupMethod"
+        }
+      }
+    },
+    "signup_serviceAuthResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "WrongUser",
+        "WrongPassword"
+      ],
+      "default": "OK"
+    },
+    "signup_serviceCodeAuthTransactionSetCodeRequest": {
+      "type": "object",
+      "properties": {
+        "transactionId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "authCode": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "signup_serviceCodeAuthTransactionSetCodeResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetCodeResponseResult"
+        },
+        "authToken": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "companyId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "signup_serviceCodeAuthTransactionSetCodeResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "CodeInvalid",
+        "TransactionIdInvalid"
+      ],
+      "default": "OK"
+    },
+    "signup_serviceCodeAuthTransactionSetPhoneRequest": {
+      "type": "object",
+      "properties": {
+        "transactionId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "phone": {
+          "type": "string"
+        }
+      }
+    },
+    "signup_serviceCodeAuthTransactionSetPhoneResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/signup_serviceCodeAuthTransactionSetPhoneResponseResult"
+        }
+      }
+    },
+    "signup_serviceCodeAuthTransactionSetPhoneResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "PhoneInvalid",
+        "TransactionIdInvalid"
+      ],
+      "default": "OK"
+    },
+    "signup_serviceCodeAuthTransactionStartRequest": {
+      "type": "object",
+      "properties": {
+        "device": {
+          "$ref": "#/definitions/deviceDeviceInfo"
+        },
+        "application": {
+          "$ref": "#/definitions/applicationApplicationInfo"
+        },
+        "locale": {
+          "type": "string"
+        }
+      },
+      "title": "CodeAuthTransaction"
+    },
+    "signup_serviceCodeAuthTransactionStartResponse": {
+      "type": "object",
+      "properties": {
+        "transactionId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "authType": {
+          "$ref": "#/definitions/CodeAuthTransactionStartResponseAuthType"
+        },
+        "authCode": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "signup_serviceCodeAuthTransactionUpdateRequest": {
+      "type": "object",
+      "properties": {
+        "transactionId": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "signup_serviceCodeAuthTransactionUpdateResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/signup_serviceCodeAuthTransactionUpdateResponseResult"
+        }
+      }
+    },
+    "signup_serviceCodeAuthTransactionUpdateResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "TransactionIdInvalid"
+      ],
+      "default": "OK"
+    },
+    "signup_serviceGetPartnerCodeRequest": {
+      "type": "object",
+      "properties": {
+        "device": {
+          "$ref": "#/definitions/deviceDeviceInfo"
+        }
+      }
+    },
+    "signup_serviceGetPartnerCodeResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/signup_serviceGetPartnerCodeResponseResult"
+        },
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "signup_serviceGetPartnerCodeResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "Error"
+      ],
+      "default": "OK"
+    },
+    "signup_serviceLogoutRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "signup_serviceLogoutResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/signup_serviceLogoutResponseResult"
+        }
+      }
+    },
+    "signup_serviceLogoutResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "signup_serviceSetCodeRequest": {
+      "type": "object",
+      "properties": {
+        "phone": {
+          "type": "string"
+        },
+        "confirmationCode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "autoUserId": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "signup_serviceSetCodeResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/signup_serviceSetCodeResponseResult"
+        },
+        "authToken": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "retryAfter": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "refreshToken": {
+          "type": "string"
+        },
+        "accessToken": {
+          "type": "string"
+        },
+        "expiresIn": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "isNewAccount": {
+          "type": "boolean"
+        }
+      }
+    },
+    "signup_serviceSetCodeResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "CodeInvalid",
+        "NoAttempts",
+        "Expired"
+      ],
+      "default": "OK"
+    },
+    "signup_serviceSetPhoneRequest": {
+      "type": "object",
+      "properties": {
+        "phone": {
+          "type": "string"
+        },
+        "device": {
+          "$ref": "#/definitions/deviceDeviceInfo"
+        },
+        "locale": {
+          "type": "string"
+        }
+      }
+    },
+    "signup_serviceSetPhoneResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/signup_serviceSetPhoneResponseResult"
+        },
+        "retryAfter": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "messageId": {
+          "type": "string"
+        }
+      }
+    },
+    "signup_serviceSetPhoneResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAttempts",
+        "AccountIsDeleted"
+      ],
+      "default": "OK"
+    }
+  }
+}

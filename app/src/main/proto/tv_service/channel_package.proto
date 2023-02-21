@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+message ChannelPackage {
+    required int32 id = 1;
+    required string name = 2;
+    repeated int32 channels = 3;
+}

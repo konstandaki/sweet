@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+message TimeOffset {
+    required int32 id = 1;
+    required int32 offset = 2;
+}
+

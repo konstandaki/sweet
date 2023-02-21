@@ -1,0 +1,62 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+message Subscription {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 discount_price = 3;
+    required int32 price = 4;
+    required int32 duration = 5;
+    optional string product_id = 6;
+    optional int32 tariff_id = 7;
+    optional uint64 date_start = 8;
+    optional uint64 date_end = 9;
+}
+
+message PromoTag {
+    required int32 id = 1;
+    required string title = 2;
+    optional string icon_url = 3;
+}
+
+message Tariff {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 price = 3;
+    required bool hidden = 4;
+    repeated int32 package_id = 5;
+    repeated int32 owner_id = 6;
+    required bool strict_channel_list = 7;
+    optional int32 iptv_channels_count = 8;
+    optional int32 movies_count = 9;
+    optional int32 dvbc_channels_count = 10;
+    optional int32 catv_channels_count = 11;
+    optional int32 next_tariff_id = 12;
+    optional string icon_url = 13;
+    optional string banner_url = 14;
+    repeated int32 subscription_id = 15;
+    optional int32 duration = 16;
+    optional int32 price_foreign = 17;
+    optional string product_id = 18;
+    optional int32 sort_order = 19;
+    optional string image_url = 20;
+    optional string promo_image_url = 21;
+    repeated PromoTag promo_tags = 100;
+}
+
+message Service {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 price = 3;
+    repeated int32 owner_id = 4;
+    optional int32 duration = 5;
+    optional string product_id = 6;
+    optional uint64 date_end = 7;
+    repeated int32 package_id = 8;
+    optional bool external_use = 9;
+    optional string expires_at = 10;
+    repeated PromoTag promo_tags = 100;
+}

@@ -1,0 +1,78 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+option java_package = "com.ua.mytrinity.tv_client.proto";
+option java_outer_classname = "UserInfoProto";
+
+import "tv_service/billing.proto";
+import "authentication_service_v2/authentication_service.proto";
+
+message UserInfo {
+    required int64 account_id = 1;
+    required float balance = 2;
+    required float cost = 3;
+    required string fullname = 4;
+    required string tariff = 5;
+    required string tv_packs = 6;
+    required bool is_vod = 7;
+    required bool is_blocked = 8;
+    optional int32 company_id = 9;
+    optional string login = 10;
+    optional string password = 11;
+    optional int32 tariff_id = 12;
+    optional int32 partner_id = 13;
+    optional bool on_test = 14;
+    optional int32 to_pay = 15;
+    optional int32 real_tariff_id = 16;
+    optional int32 subscription_id = 17;
+    optional int32 subscription_end_time = 18;
+    optional string locale = 19;
+    optional int32 tariff_paid_for = 20;
+    optional bool auto_user = 21;
+    optional string promo_code = 22;
+    optional string email = 23;
+    repeated Service services = 24;
+    optional sint64 date_of_birth = 25;
+    optional int32 currency_to_pay = 26;
+    optional float currency_balance = 27;
+    optional float currency_cost = 28;
+    optional bool autopayment_enabled = 29;
+    optional string phone_number = 30;
+    optional int32 notification_day = 31;
+    optional int32 date_contract = 32;
+    optional int32 date_tariff_binding = 33;
+    optional int32 bound_tariff_id = 34;
+    optional int32 subscription_store = 35;
+    optional string blogger_promo = 36;
+    optional int32 subscription_store_end_time = 37;
+    optional int32 blogger_abon_count = 38 [deprecated=true];
+    optional string subscription_store_product_id = 39 [deprecated=true];
+    optional bool parental_control_enabled = 40;
+    optional int32 referrer = 41;
+    optional int32 geo_zone_id = 42;
+    required int64 contract_id = 43;
+    repeated Subscription subscriptions = 44;
+    optional string signup_fullname = 45;
+    optional string signup_note = 46;
+    optional string signup_phone_number = 47;
+    optional string signup_email = 48;
+    optional authentication_service_v2.OAuthProvider signup_oAuthProvider = 49;
+    optional bool mono_smartphone = 100;
+    optional bool notifications_enabled = 200;
+    optional bool report_requested = 201;
+}
+
+message GetUserInfoRequest {
+    optional string auth = 1;
+}
+
+message GetUserInfoResponse {
+    enum Result {
+        OK   = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    optional UserInfo info = 2;
+}

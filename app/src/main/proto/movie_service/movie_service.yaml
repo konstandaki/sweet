@@ -1,0 +1,304 @@
+type: google.api.Service
+config_version: 3
+http:
+  rules:
+    - selector: movie_service.MovieService.GetPromoBanners
+      post: /MovieService/GetPromoBanners
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetPromoBanners.json
+          body: '*'
+        - post: /PromoServerService/GetPromoBanners
+          body: '*'
+        - post: /PromoServerService/GetPromoBanners.pb
+          body: '*'
+        - post: /PromoServerService/GetPromoBanners.json
+          body: '*'
+    - selector: movie_service.MovieService.GetPremiereBanners
+      post: /MovieService/GetPremiereBanners
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetPremiereBanners.json
+          body: '*'
+        - post: /PromoServerService/GetPremiereBanners
+          body: '*'
+        - post: /PromoServerService/GetPremiereBanners.pb
+          body: '*'
+        - post: /PromoServerService/GetPremiereBanners.json
+          body: '*'
+    - selector: movie_service.MovieService.GetGenreMovies
+      post: /MovieService/GetGenreMovies
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetGenreMovies.json
+          body: '*'
+        - post: /MovieServerService/GetGenreMovies
+          body: '*'
+        - post: /MovieServerService/GetGenreMovies.pb
+          body: '*'
+        - post: /MovieServerService/GetGenreMovies.json
+          body: '*'
+    - selector: movie_service.MovieService.GetMovieInfo
+      post: /MovieService/GetMovieInfo
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetMovieInfo.json
+          body: '*'
+        - post: /MovieServerService/GetMovieInfo
+          body: '*'
+        - post: /MovieServerService/GetMovieInfo.pb
+          body: '*'
+        - post: /MovieServerService/GetMovieInfo.json
+          body: '*'
+    - selector: movie_service.MovieService.GetLink
+      post: /MovieService/GetLink
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetLink.json
+          body: '*'
+        - post: /MovieServerService/GetLink
+          body: '*'
+        - post: /MovieServerService/GetLink.pb
+          body: '*'
+        - post: /MovieServerService/GetLink.json
+          body: '*'
+    - selector: movie_service.MovieService.GetPremiereMovies
+      post: /MovieService/GetPremiereMovies
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetPremiereMovies.json
+          body: '*'
+        - post: /MovieServerService/GetPremiereMovies
+          body: '*'
+        - post: /MovieServerService/GetPremiereMovies.pb
+          body: '*'
+        - post: /MovieServerService/GetPremiereMovies.json
+          body: '*'
+    - selector: movie_service.MovieService.GetPurchasedMovies
+      post: /MovieService/GetPurchasedMovies
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetPurchasedMovies.json
+          body: '*'
+        - post: /MovieServerService/GetPurchasedMovies
+          body: '*'
+        - post: /MovieServerService/GetPurchasedMovies.pb
+          body: '*'
+        - post: /MovieServerService/GetPurchasedMovies.json
+          body: '*'
+    - selector: movie_service.MovieService.GetConfiguration
+      post: /MovieService/GetConfiguration
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetConfiguration.json
+          body: '*'
+        - post: /MovieServerService/GetConfiguration
+          body: '*'
+        - post: /MovieServerService/GetConfiguration.pb
+          body: '*'
+        - post: /MovieServerService/GetConfiguration.json
+          body: '*'
+    - selector: movie_service.MovieService.GetRecommendedMovies
+      post: /MovieService/GetRecommendedMovies
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetRecommendedMovies.json
+          body: '*'
+        - post: /MovieServerService/GetRecommendedMovies
+          body: '*'
+        - post: /MovieServerService/GetRecommendedMovies.pb
+          body: '*'
+        - post: /MovieServerService/GetRecommendedMovies.json
+          body: '*'
+    - selector: movie_service.MovieService.GetCollectionMovies
+      post: /MovieService/GetCollectionMovies
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetCollectionMovies.json
+          body: '*'
+        - post: /MovieServerService/GetCollectionMovies
+          body: '*'
+        - post: /MovieServerService/GetCollectionMovies.pb
+          body: '*'
+        - post: /MovieServerService/GetCollectionMovies.json
+          body: '*'
+    - selector: movie_service.MovieService.GetWatchList
+      post: /MovieService/GetWatchList
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetWatchList.json
+          body: '*'
+        - post: /MovieServerService/GetWatchList
+          body: '*'
+        - post: /MovieServerService/GetWatchList.pb
+          body: '*'
+        - post: /MovieServerService/GetWatchList.json
+          body: '*'
+    - selector: movie_service.MovieService.SetWatchInfo
+      post: /MovieService/SetWatchInfo
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/SetWatchInfo.json
+          body: '*'
+        - post: /MovieServerService/SetWatchInfo
+          body: '*'
+        - post: /MovieServerService/SetWatchInfo.pb
+          body: '*'
+        - post: /MovieServerService/SetWatchInfo.json
+          body: '*'
+    - selector: movie_service.MovieService.ClearWatchInfo
+      post: /MovieService/ClearWatchInfo
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/ClearWatchInfo.json
+          body: '*'
+        - post: /MovieServerService/ClearWatchInfo
+          body: '*'
+        - post: /MovieServerService/ClearWatchInfo.pb
+          body: '*'
+        - post: /MovieServerService/ClearWatchInfo.json
+          body: '*'
+    - selector: movie_service.MovieService.GetFavoriteMovies
+      post: /MovieService/GetFavoriteMovies
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetFavoriteMovies.json
+          body: '*'
+        - post: /MovieServerService/GetFavoriteMovies
+          body: '*'
+        - post: /MovieServerService/GetFavoriteMovies.pb
+          body: '*'
+        - post: /MovieServerService/GetFavoriteMovies.json
+          body: '*'
+    - selector: movie_service.MovieService.GetPersonInfo
+      post: /MovieService/GetPersonInfo
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetPersonInfo.json
+          body: '*'
+        - post: /MovieServerService/GetPersonInfo
+          body: '*'
+        - post: /MovieServerService/GetPersonInfo.pb
+          body: '*'
+        - post: /MovieServerService/GetPersonInfo.json
+          body: '*'
+    - selector: movie_service.MovieService.GetPersonsInfo
+      post: /MovieService/GetPersonsInfo
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetPersonsInfo.json
+          body: '*'
+        - post: /MovieServerService/GetPersonsInfo
+          body: '*'
+        - post: /MovieServerService/GetPersonsInfo.pb
+          body: '*'
+        - post: /MovieServerService/GetPersonsInfo.json
+          body: '*'
+    - selector: movie_service.MovieService.GetDownloadableMovies
+      post: /MovieService/GetDownloadableMovies
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetDownloadableMovies.json
+          body: '*'
+        - post: /MovieServerService/GetDownloadableMovies
+          body: '*'
+        - post: /MovieServerService/GetDownloadableMovies.pb
+          body: '*'
+        - post: /MovieServerService/GetDownloadableMovies.json
+          body: '*'
+    - selector: movie_service.MovieService.Rate
+      post: /MovieService/Rate
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/Rate.json
+          body: '*'
+    - selector: movie_service.MovieService.AddFavoriteMovie
+      post: /MovieService/AddFavoriteMovie
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/AddFavoriteMovie.json
+          body: '*'
+        - post: /MovieServerService/AddFavoriteMovie
+          body: '*'
+        - post: /MovieServerService/AddFavoriteMovie.pb
+          body: '*'
+        - post: /MovieServerService/AddFavoriteMovie.json
+          body: '*'
+    - selector: movie_service.MovieService.RemoveFavoriteMovie
+      post: /MovieService/RemoveFavoriteMovie
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/RemoveFavoriteMovie.json
+          body: '*'
+        - post: /MovieServerService/RemoveFavoriteMovie
+          body: '*'
+        - post: /MovieServerService/RemoveFavoriteMovie.pb
+          body: '*'
+        - post: /MovieServerService/RemoveFavoriteMovie.json
+          body: '*'
+    - selector: movie_service.MovieService.PostComment
+      post: /MovieService/PostComment
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/PostComment.json
+          body: '*'
+    - selector: movie_service.MovieService.EditComment
+      post: /MovieService/EditComment
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/EditComment.json
+          body: '*'
+    - selector: movie_service.MovieService.DeleteComment
+      post: /MovieService/DeleteComment
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/DeleteComment.json
+          body: '*'
+    - selector: movie_service.MovieService.GetCollections
+      post: /MovieService/GetCollections
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetCollections.json
+          body: '*'
+        - post: /MovieServerService/GetCollections
+          body: '*'
+        - post: /MovieServerService/GetCollections.pb
+          body: '*'
+        - post: /MovieServerService/GetCollections.json
+          body: '*'
+    - selector: movie_service.MovieService.GetSubgenreMovies
+      post: /MovieService/GetSubgenreMovies
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetSubgenreMovies.json
+          body: '*'
+    - selector: movie_service.MovieService.GetFilters
+      post: /MovieService/GetFilters
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetFilters.json
+          body: '*'
+    - selector: movie_service.MovieService.GetFilteredMovies
+      post: /MovieService/GetFilteredMovies
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetFilteredMovies.json
+          body: '*'
+    - selector: movie_service.MovieService.GetFilterOption
+      post: /MovieService/GetFilterOption
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetFilterOption.json
+          body: '*'
+    - selector: movie_service.MovieService.NotifyMovieRelease
+      post: /MovieService/NotifyMovieRelease
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/NotifyMovieRelease.json
+          body: '*'
+    - selector: movie_service.MovieService.GetRecommendations
+      post: /MovieService/GetRecommendations
+      body: '*'
+      additional_bindings:
+        - post: /MovieService/GetRecommendations.json
+          body: '*'

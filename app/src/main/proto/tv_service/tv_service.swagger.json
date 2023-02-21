@@ -1,0 +1,3061 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "tv_service/tv_service.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "TvService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/StbServerService/GetUserChannel": {
+      "post": {
+        "operationId": "TvService_GetUserChannel3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUserChannelResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUserChannelRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/StbServerService/GetUserChannel.json": {
+      "post": {
+        "operationId": "TvService_GetUserChannel5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUserChannelResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUserChannelRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/StbServerService/GetUserChannel.pb": {
+      "post": {
+        "operationId": "TvService_GetUserChannel4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUserChannelResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUserChannelRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/StbServerService/SetUserChannel": {
+      "post": {
+        "operationId": "TvService_SetUserChannel3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceSetUserChannelResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceSetUserChannelRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/StbServerService/SetUserChannel.json": {
+      "post": {
+        "operationId": "TvService_SetUserChannel5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceSetUserChannelResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceSetUserChannelRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/StbServerService/SetUserChannel.pb": {
+      "post": {
+        "operationId": "TvService_SetUserChannel4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceSetUserChannelResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceSetUserChannelRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/CloseStream": {
+      "post": {
+        "operationId": "TvService_CloseStream3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceCloseStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceCloseStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/CloseStream.json": {
+      "post": {
+        "operationId": "TvService_CloseStream5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceCloseStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceCloseStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/CloseStream.pb": {
+      "post": {
+        "operationId": "TvService_CloseStream4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceCloseStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceCloseStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetChannels": {
+      "post": {
+        "operationId": "TvService_GetChannels3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetChannelsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetChannelsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetChannels.json": {
+      "post": {
+        "operationId": "TvService_GetChannels5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetChannelsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetChannelsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetChannels.pb": {
+      "post": {
+        "operationId": "TvService_GetChannels4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetChannelsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetChannelsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetEpgRecordPreview": {
+      "post": {
+        "operationId": "TvService_GetEpgRecordPreview3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetEpgRecordPreviewResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetEpgRecordPreviewRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetEpgRecordPreview.json": {
+      "post": {
+        "operationId": "TvService_GetEpgRecordPreview5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetEpgRecordPreviewResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetEpgRecordPreviewRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetEpgRecordPreview.pb": {
+      "post": {
+        "operationId": "TvService_GetEpgRecordPreview4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetEpgRecordPreviewResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetEpgRecordPreviewRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetTvShowInfo": {
+      "post": {
+        "operationId": "TvService_GetTvShowInfo3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTvShowInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTvShowInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetTvShowInfo.json": {
+      "post": {
+        "operationId": "TvService_GetTvShowInfo5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTvShowInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTvShowInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetTvShowInfo.pb": {
+      "post": {
+        "operationId": "TvService_GetTvShowInfo4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTvShowInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTvShowInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetUserInfo": {
+      "post": {
+        "operationId": "TvService_GetUserInfo3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetUserInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetUserInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetUserInfo.json": {
+      "post": {
+        "operationId": "TvService_GetUserInfo5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetUserInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetUserInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/GetUserInfo.pb": {
+      "post": {
+        "operationId": "TvService_GetUserInfo4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetUserInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetUserInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/OpenStream": {
+      "post": {
+        "operationId": "TvService_OpenStream3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceOpenStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceOpenStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/OpenStream.json": {
+      "post": {
+        "operationId": "TvService_OpenStream5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceOpenStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceOpenStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/OpenStream.pb": {
+      "post": {
+        "operationId": "TvService_OpenStream4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceOpenStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceOpenStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/UpdateStream": {
+      "post": {
+        "operationId": "TvService_UpdateStream3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUpdateStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUpdateStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/UpdateStream.json": {
+      "post": {
+        "operationId": "TvService_UpdateStream5",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUpdateStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUpdateStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvServerService/UpdateStream.pb": {
+      "post": {
+        "operationId": "TvService_UpdateStream4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUpdateStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUpdateStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/CloseStream": {
+      "post": {
+        "operationId": "TvService_CloseStream",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceCloseStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceCloseStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/CloseStream.json": {
+      "post": {
+        "operationId": "TvService_CloseStream2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceCloseStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceCloseStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetChannels": {
+      "post": {
+        "operationId": "TvService_GetChannels",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetChannelsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetChannelsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetChannels.json": {
+      "post": {
+        "operationId": "TvService_GetChannels2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetChannelsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetChannelsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetEpgRecordPreview": {
+      "post": {
+        "operationId": "TvService_GetEpgRecordPreview",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetEpgRecordPreviewResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetEpgRecordPreviewRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetEpgRecordPreview.json": {
+      "post": {
+        "operationId": "TvService_GetEpgRecordPreview2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetEpgRecordPreviewResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetEpgRecordPreviewRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetMyVouchers": {
+      "post": {
+        "operationId": "TvService_GetMyVouchers",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetMyVouchersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetMyVouchersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetMyVouchers.json": {
+      "post": {
+        "operationId": "TvService_GetMyVouchers2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetMyVouchersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetMyVouchersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetSubscriptions": {
+      "post": {
+        "operationId": "TvService_GetSubscriptions",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetSubscriptionsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetSubscriptionsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetSubscriptions.json": {
+      "post": {
+        "operationId": "TvService_GetSubscriptions2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetSubscriptionsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetSubscriptionsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetTariffs": {
+      "post": {
+        "operationId": "TvService_GetTariffs",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTariffsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTariffsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetTariffs.json": {
+      "post": {
+        "operationId": "TvService_GetTariffs2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTariffsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTariffsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetTariffsOffers": {
+      "post": {
+        "operationId": "TvService_GetTariffsOffers",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTariffsOffersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTariffsOffersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetTariffsOffers.json": {
+      "post": {
+        "operationId": "TvService_GetTariffsOffers2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTariffsOffersResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTariffsOffersRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetTvShowInfo": {
+      "post": {
+        "operationId": "TvService_GetTvShowInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTvShowInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTvShowInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetTvShowInfo.json": {
+      "post": {
+        "operationId": "TvService_GetTvShowInfo2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTvShowInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetTvShowInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetUserChannel": {
+      "post": {
+        "operationId": "TvService_GetUserChannel",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUserChannelResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUserChannelRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetUserChannel.json": {
+      "post": {
+        "operationId": "TvService_GetUserChannel2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUserChannelResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUserChannelRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetUserInfo": {
+      "post": {
+        "operationId": "TvService_GetUserInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetUserInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetUserInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/GetUserInfo.json": {
+      "post": {
+        "operationId": "TvService_GetUserInfo2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetUserInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceGetUserInfoRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/OpenStream": {
+      "post": {
+        "operationId": "TvService_OpenStream",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceOpenStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceOpenStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/OpenStream.json": {
+      "post": {
+        "operationId": "TvService_OpenStream2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceOpenStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceOpenStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/SetUserChannel": {
+      "post": {
+        "operationId": "TvService_SetUserChannel",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceSetUserChannelResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceSetUserChannelRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/SetUserChannel.json": {
+      "post": {
+        "operationId": "TvService_SetUserChannel2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceSetUserChannelResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceSetUserChannelRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/UpdateStream": {
+      "post": {
+        "operationId": "TvService_UpdateStream",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUpdateStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUpdateStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    },
+    "/TvService/UpdateStream.json": {
+      "post": {
+        "operationId": "TvService_UpdateStream2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUpdateStreamResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/tv_serviceUpdateStreamRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TvService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "authentication_service_v2OAuthProvider": {
+      "type": "string",
+      "enum": [
+        "GOOGLE",
+        "FACEBOOK",
+        "APPLE",
+        "PROVIDER_UNKNOWN"
+      ],
+      "default": "GOOGLE"
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "tv_serviceCacheServer": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "$ref": "#/definitions/tv_serviceIPPort"
+        }
+      }
+    },
+    "tv_serviceCategory": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string",
+          "format": "byte"
+        },
+        "order": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "iconUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceChannel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string",
+          "format": "byte"
+        },
+        "epg": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceEpgRecord"
+          }
+        },
+        "offset": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "available": {
+          "type": "boolean"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "category": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "hiddenInFullList": {
+          "type": "boolean"
+        },
+        "iconBig": {
+          "type": "string",
+          "format": "byte"
+        },
+        "catchup": {
+          "type": "boolean"
+        },
+        "catchupDuration": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "iconUrl": {
+          "type": "string"
+        },
+        "tariffs": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "drm": {
+          "type": "boolean"
+        },
+        "ownerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "bannerUrl": {
+          "type": "string"
+        },
+        "darkThemeIconUrl": {
+          "type": "string"
+        },
+        "colour": {
+          "type": "string"
+        },
+        "iconV2Url": {
+          "type": "string"
+        },
+        "translations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "availabilityInfo": {
+          "type": "string"
+        },
+        "availabilityInfoColor": {
+          "type": "string"
+        },
+        "rewindDisabled": {
+          "type": "boolean",
+          "title": "100+ reserved for flags"
+        },
+        "fastForwardDisabled": {
+          "type": "boolean"
+        },
+        "speedupDisabled": {
+          "type": "boolean"
+        },
+        "rewindMessage": {
+          "type": "string",
+          "title": "200+ reserved for messages"
+        },
+        "fastForwardMessage": {
+          "type": "string"
+        },
+        "speedupMessage": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceCloseStreamRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "streamId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "tv_serviceCloseStreamResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/tv_serviceCloseStreamResponseResult"
+        }
+      }
+    },
+    "tv_serviceCloseStreamResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "tv_serviceEntryPointData": {
+      "type": "object",
+      "properties": {
+        "channelId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "categoryId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "forced": {
+          "type": "boolean"
+        }
+      }
+    },
+    "tv_serviceEpgRecord": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "text": {
+          "type": "string"
+        },
+        "timeStart": {
+          "type": "string",
+          "format": "int64"
+        },
+        "timeStop": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "tv_serviceGetChannelsRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "needIcons": {
+          "type": "boolean"
+        },
+        "needEpg": {
+          "type": "boolean"
+        },
+        "needOffsets": {
+          "type": "boolean"
+        },
+        "needCategories": {
+          "type": "boolean"
+        },
+        "needHash": {
+          "type": "boolean"
+        },
+        "needList": {
+          "type": "boolean"
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "epgStartOffset": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "epgStopOffset": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "epgLimitPrev": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "epgLimitNext": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "epgCurrentTime": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "category": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "needBigIcons": {
+          "type": "boolean"
+        }
+      }
+    },
+    "tv_serviceGetChannelsResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/tv_serviceGetChannelsResponseResult"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceChannel"
+          }
+        },
+        "offsets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceTimeOffset"
+          }
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceCategory"
+          }
+        },
+        "listHash": {
+          "type": "string"
+        },
+        "listIdHash": {
+          "type": "string"
+        },
+        "epgUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceGetChannelsResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "tv_serviceGetEpgRecordPreviewRequest": {
+      "type": "object",
+      "properties": {
+        "channelId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "epgId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "timeStamp": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "tv_serviceGetEpgRecordPreviewResponse": {
+      "type": "object",
+      "properties": {
+        "previewUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceGetMyVouchersRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceGetMyVouchersResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/tv_serviceGetMyVouchersResponseResult"
+        },
+        "vouchers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceVoucher"
+          }
+        }
+      }
+    },
+    "tv_serviceGetMyVouchersResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth",
+        "NoVouchersFound"
+      ],
+      "default": "OK"
+    },
+    "tv_serviceGetSubscriptionsRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceGetSubscriptionsResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/tv_serviceGetSubscriptionsResponseResult"
+        },
+        "subscriptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceSubscription"
+          }
+        }
+      }
+    },
+    "tv_serviceGetSubscriptionsResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "tv_serviceGetTariffsOffersRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceGetTariffsOffersResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/tv_serviceGetTariffsOffersResponseResult"
+        },
+        "tariffId": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "tv_serviceGetTariffsOffersResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "tv_serviceGetTariffsRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceGetTariffsResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/tv_serviceGetTariffsResponseResult"
+        },
+        "tariffs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceTariff"
+          }
+        }
+      }
+    },
+    "tv_serviceGetTariffsResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "tv_serviceGetTvShowInfoRequest": {
+      "type": "object",
+      "properties": {
+        "tvShows": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "offset": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "tv_serviceGetTvShowInfoResponse": {
+      "type": "object",
+      "properties": {
+        "tvShows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceTvShow"
+          }
+        }
+      }
+    },
+    "tv_serviceGetUserInfoRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceGetUserInfoResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/tv_serviceGetUserInfoResponseResult"
+        },
+        "info": {
+          "$ref": "#/definitions/tv_serviceUserInfo"
+        }
+      }
+    },
+    "tv_serviceGetUserInfoResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "tv_serviceHttpStreamer": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "$ref": "#/definitions/tv_serviceIPPort"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceIPPort": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "tv_serviceOpenStreamRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "channelId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "offsetId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "acceptScheme": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceStreamScheme"
+          }
+        },
+        "firstBatchSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "epgId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "multistream": {
+          "type": "boolean"
+        },
+        "previewMode": {
+          "type": "boolean"
+        },
+        "pinCode": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceOpenStreamResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/tv_serviceOpenStreamResponseResult"
+        },
+        "scheme": {
+          "$ref": "#/definitions/tv_serviceStreamScheme"
+        },
+        "multicastGroup": {
+          "$ref": "#/definitions/tv_serviceIPPort"
+        },
+        "httpStream": {
+          "$ref": "#/definitions/tv_serviceHttpStreamer"
+        },
+        "unicastStream": {
+          "$ref": "#/definitions/tv_serviceUnicastStreamer"
+        },
+        "cacheServer": {
+          "$ref": "#/definitions/tv_serviceCacheServer"
+        },
+        "streamId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "updateInterval": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "licenseServer": {
+          "type": "string"
+        },
+        "mesh": {
+          "type": "boolean"
+        },
+        "contentKey": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceOpenStreamResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth",
+        "NotFound",
+        "Deny",
+        "CodeInvalid"
+      ],
+      "default": "OK"
+    },
+    "tv_servicePromoTag": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "iconUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceRecord": {
+      "type": "object",
+      "properties": {
+        "channelId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "epgId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "available": {
+          "type": "boolean"
+        },
+        "tariffs": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "imageUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceService": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ownerId": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "duration": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productId": {
+          "type": "string"
+        },
+        "dateEnd": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "packageId": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "externalUse": {
+          "type": "boolean"
+        },
+        "expiresAt": {
+          "type": "string"
+        },
+        "promoTags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_servicePromoTag"
+          }
+        }
+      }
+    },
+    "tv_serviceSetUserChannelRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/tv_serviceUserChannelData"
+        },
+        "useShared": {
+          "type": "boolean"
+        }
+      }
+    },
+    "tv_serviceSetUserChannelResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/tv_serviceSetUserChannelResponseResult"
+        }
+      }
+    },
+    "tv_serviceSetUserChannelResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "tv_serviceStreamScheme": {
+      "type": "string",
+      "enum": [
+        "MULTICAST_UDP",
+        "MULTICAST_SUDP",
+        "UNICAST_UDP",
+        "UNICAST_SUDP",
+        "HTTP_UDP",
+        "HTTP_SUDP",
+        "HTTP_HLS",
+        "HTTP_HLS_TIMESHIFT",
+        "HTTPS_HLS_DRM",
+        "HTTPS_DASH_DRM",
+        "HTTPS_HLS_AES_128"
+      ]
+    },
+    "tv_serviceSubscription": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "discountPrice": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "duration": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productId": {
+          "type": "string"
+        },
+        "tariffId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "dateStart": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "dateEnd": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "tv_serviceTariff": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "packageId": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "ownerId": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "strictChannelList": {
+          "type": "boolean"
+        },
+        "iptvChannelsCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "moviesCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "dvbcChannelsCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "catvChannelsCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nextTariffId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "iconUrl": {
+          "type": "string"
+        },
+        "bannerUrl": {
+          "type": "string"
+        },
+        "subscriptionId": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "duration": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "priceForeign": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productId": {
+          "type": "string"
+        },
+        "sortOrder": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "promoImageUrl": {
+          "type": "string"
+        },
+        "promoTags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_servicePromoTag"
+          }
+        }
+      }
+    },
+    "tv_serviceTimeOffset": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "offset": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "tv_serviceTvShow": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "lastShowDate": {
+          "type": "string"
+        },
+        "productionYear": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "duration": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ageLimit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "rating": {
+          "type": "number",
+          "format": "float"
+        },
+        "posterUrl": {
+          "type": "string"
+        },
+        "bannerUrl": {
+          "type": "string"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "people": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "slug": {
+          "type": "string"
+        },
+        "trailerUrl": {
+          "type": "string"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceRecord"
+          }
+        }
+      }
+    },
+    "tv_serviceUnicastStreamer": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "$ref": "#/definitions/tv_serviceIPPort"
+        }
+      }
+    },
+    "tv_serviceUpdateStreamRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "streamId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "tv_serviceUpdateStreamResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/tv_serviceUpdateStreamResponseResult"
+        },
+        "previewUrl": {
+          "type": "string"
+        }
+      }
+    },
+    "tv_serviceUpdateStreamResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth",
+        "ReopenStream",
+        "NotFound",
+        "DeclineStream"
+      ],
+      "default": "OK"
+    },
+    "tv_serviceUserChannelData": {
+      "type": "object",
+      "properties": {
+        "channelId": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "enabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "tv_serviceUserChannelRequest": {
+      "type": "object",
+      "properties": {
+        "auth": {
+          "type": "string"
+        },
+        "useShared": {
+          "type": "boolean"
+        }
+      }
+    },
+    "tv_serviceUserChannelResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/tv_serviceUserChannelResponseResult"
+        },
+        "data": {
+          "$ref": "#/definitions/tv_serviceUserChannelData"
+        },
+        "entryPoint": {
+          "$ref": "#/definitions/tv_serviceEntryPointData"
+        }
+      }
+    },
+    "tv_serviceUserChannelResponseResult": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "NoAuth"
+      ],
+      "default": "OK"
+    },
+    "tv_serviceUserInfo": {
+      "type": "object",
+      "properties": {
+        "accountId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "balance": {
+          "type": "number",
+          "format": "float"
+        },
+        "cost": {
+          "type": "number",
+          "format": "float"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "tariff": {
+          "type": "string"
+        },
+        "tvPacks": {
+          "type": "string"
+        },
+        "isVod": {
+          "type": "boolean"
+        },
+        "isBlocked": {
+          "type": "boolean"
+        },
+        "companyId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "login": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "tariffId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "partnerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "onTest": {
+          "type": "boolean"
+        },
+        "toPay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "realTariffId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "subscriptionId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "subscriptionEndTime": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "tariffPaidFor": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "autoUser": {
+          "type": "boolean"
+        },
+        "promoCode": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "services": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceService"
+          }
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "int64"
+        },
+        "currencyToPay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "currencyBalance": {
+          "type": "number",
+          "format": "float"
+        },
+        "currencyCost": {
+          "type": "number",
+          "format": "float"
+        },
+        "autopaymentEnabled": {
+          "type": "boolean"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "notificationDay": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "dateContract": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "dateTariffBinding": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "boundTariffId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "subscriptionStore": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "bloggerPromo": {
+          "type": "string"
+        },
+        "subscriptionStoreEndTime": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "bloggerAbonCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "subscriptionStoreProductId": {
+          "type": "string"
+        },
+        "parentalControlEnabled": {
+          "type": "boolean"
+        },
+        "referrer": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "geoZoneId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "contractId": {
+          "type": "string",
+          "format": "int64"
+        },
+        "subscriptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tv_serviceSubscription"
+          }
+        },
+        "signupFullname": {
+          "type": "string"
+        },
+        "signupNote": {
+          "type": "string"
+        },
+        "signupPhoneNumber": {
+          "type": "string"
+        },
+        "signupEmail": {
+          "type": "string"
+        },
+        "signupOAuthProvider": {
+          "$ref": "#/definitions/authentication_service_v2OAuthProvider"
+        },
+        "monoSmartphone": {
+          "type": "boolean"
+        },
+        "notificationsEnabled": {
+          "type": "boolean"
+        },
+        "reportRequested": {
+          "type": "boolean"
+        }
+      }
+    },
+    "tv_serviceVoucher": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "activationDate": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "expirationDate": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "packageId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "tariffId": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    }
+  }
+}

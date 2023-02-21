@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package application;
+
+option go_package = "gitlab.sweet.tv/proto/application";
+option java_package = "com.ua.mytrinity.tv_client.proto";
+
+message ApplicationInfo {
+    enum ApplicationType {
+        AT_Unknown = 0;
+        AT_TRINITY_Player = 1;
+        AT_SWEET_TV_Player = 2;
+        AT_CACTUS_Player = 3;
+        AT_Alpha_IP = 4;
+        AT_GRIZLI_Player = 5;
+        AT_Bravis_TV_Player = 6;
+        AT_Startelecom_TV = 7;
+        AT_Apelsin = 8;
+        AT_IMPERIAL_TV = 9;
+        AT_AIWA = 10;
+        AT_Kahovka = 11;
+        AT_VODAFONE_TV = 12;
+        AT_DiaNet = 13;
+        AT_Kopeika = 14;
+        AT_RNet = 15;
+	      AT_HISENSE = 16;
+        AT_UA_CITY = 17;
+        AT_Enlider = 18;
+        AT_Bestlink = 19;
+        AT_Streamnetwork = 20;
+        AT_Homenet = 21;
+        AT_NetZahid = 22;
+    }
+    ApplicationType type = 1;
+}

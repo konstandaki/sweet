@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+enum StreamScheme {
+    MULTICAST_UDP = 1;
+    MULTICAST_SUDP = 2;
+    UNICAST_UDP = 3;
+    UNICAST_SUDP = 4;
+    HTTP_UDP = 5;
+    HTTP_SUDP = 6;
+    HTTP_HLS = 7;
+    HTTP_HLS_TIMESHIFT = 8;
+    HTTPS_HLS_DRM = 9;
+    HTTPS_DASH_DRM = 10;
+    HTTPS_HLS_AES_128 = 11;
+}

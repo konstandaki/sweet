@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+message IPPort {
+    required string address = 1;
+    required int32 port = 2;
+}
+
+message CacheServer {
+    required IPPort host = 1;
+}
+
+message UnicastStreamer {
+    required IPPort host = 1;
+}
+
+message HttpStreamer {
+    required IPPort host = 1;
+    required string url = 2;
+}

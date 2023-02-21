@@ -1,0 +1,43 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+import "tv_service/servers.proto";
+
+message StreamSource {
+    required int32 id = 1;
+    required IPPort stream_host = 2;
+    optional IPPort control_host = 3;
+    optional string url = 4;
+}
+
+message ChannelSources {
+    required int32 id_channel = 1;
+    required int32 id_offset = 2;
+    required int32 id_company = 10;
+
+    repeated StreamSource udp_multicast_group = 3;
+    repeated StreamSource sudp_multicast_group = 4;
+
+    repeated StreamSource udp_streamer = 5;
+    repeated StreamSource sudp_streamer = 6;
+
+    repeated StreamSource udp_http_streamer = 7;
+    repeated StreamSource sudp_http_streamer = 8;
+
+    repeated StreamSource cache_server = 9;
+
+    repeated StreamSource hls_http_streamer = 11;
+    repeated StreamSource hls_timeshift_http_streamer = 12;
+    repeated StreamSource hls_drm_https_streamer = 13;
+    repeated StreamSource dash_drm_https_streamer = 14;
+    repeated StreamSource hls_aes_https_streamer = 15;
+}
+
+message ChannelSorting {
+    required int32 id = 1;
+    required string name = 2;
+    repeated int32 id_channel = 3;
+}

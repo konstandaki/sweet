@@ -1,0 +1,469 @@
+syntax = "proto2";
+
+package tv_service;
+
+option go_package = "gitlab.sweet.tv/proto/tv_service";
+
+import "tv_service/billing.proto";
+import "tv_service/channel.proto";
+import "tv_service/time_offset.proto";
+import "tv_service/stream.proto";
+import "tv_service/servers.proto";
+import "tv_service/category.proto";
+//import "channel_package.proto";
+import "tv_service/user_info.proto";
+import "tv_service/tv_show.proto";
+import "tv_service/epg.proto";
+
+import "google/api/annotations.proto";
+
+message Voucher {
+    required string code = 1;
+    optional uint64 activation_date = 2;
+    optional uint64 expiration_date = 3;
+    optional uint32 package_id = 4;
+    optional uint32 tariff_id = 5;
+}
+
+message OpenStreamRequest {
+    optional string auth = 1;
+    required int32 channel_id = 2;
+    optional int32 offset_id = 3 [default = 1];
+    repeated StreamScheme accept_scheme = 4;
+    optional uint32 first_batch_size = 5;
+    optional int32 epg_id = 6;
+    optional bool multistream = 7;
+    optional bool preview_mode = 8;
+    optional string pin_code = 9;
+}
+
+message OpenStreamResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+        NotFound = 2;
+        Deny = 3;
+        CodeInvalid = 4;
+    }
+
+    required Result result = 1;
+    optional StreamScheme scheme = 2;
+    optional IPPort multicast_group = 3;
+    optional HttpStreamer http_stream = 4;
+    optional UnicastStreamer unicast_stream = 5;
+    optional CacheServer cache_server = 6;
+    optional int32 stream_id = 7;
+    optional uint32 update_interval = 8 [default = 60];
+    optional string license_server = 9;
+    optional bool mesh = 10;
+    optional string content_key = 11;
+}
+
+message UpdateStreamRequest {
+    optional string auth = 1;
+    required int32 stream_id = 2;
+}
+
+message UpdateStreamResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+        ReopenStream = 2;
+        NotFound = 3;
+        DeclineStream = 4;
+    }
+    required Result result = 1;
+    optional string preview_url = 2;
+}
+
+message CloseStreamRequest {
+    optional string auth = 1;
+    required int32 stream_id = 2;
+}
+
+message CloseStreamResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+}
+
+message GetChannelsRequest {
+    optional string auth = 1;
+    required bool need_icons = 2;
+    required bool need_epg = 3;
+    required bool need_offsets = 4;
+    optional bool need_categories = 8;
+    optional bool need_hash = 12;
+    optional bool need_list = 13;
+    repeated int32 channels = 5;
+    optional int32 epg_start_offset = 6;
+    optional int32 epg_stop_offset = 7;
+    optional int32 epg_limit_prev = 10;
+    optional int32 epg_limit_next = 11;
+    optional uint64 epg_current_time = 14;
+    repeated int32 category = 9;
+    optional bool need_big_icons = 15;
+}
+
+message GetChannelsResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated Channel list = 2;
+    repeated TimeOffset offsets = 3;
+    repeated Category categories = 4;
+    optional string list_hash = 5;
+    optional string list_id_hash = 6;
+    optional string epg_url = 7;
+}
+
+message GetTariffsRequest {
+    optional string auth = 1;
+}
+
+message GetTariffsResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated Tariff tariffs = 2;
+}
+
+message GetSubscriptionsRequest {
+    optional string auth = 1;
+}
+
+message GetSubscriptionsResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated Subscription subscriptions = 2;
+}
+
+message GetTariffsOffersRequest {
+    optional string auth = 1;
+}
+
+message GetTariffsOffersResponse {
+    enum Result {
+        OK = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+    repeated int32 tariff_id = 2;
+}
+
+message UserChannelData {
+    repeated int32 channel_id = 1;
+    required bool enabled = 2;
+}
+
+message UserChannelRequest {
+    optional string auth = 1;
+    optional bool use_shared = 2;
+}
+
+message EntryPointData {
+    optional int32 channel_id = 1;
+    optional int32 category_id = 2;
+    optional bool forced = 3;
+}
+
+message UserChannelResponse {
+    enum Result {
+        OK   = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+    optional UserChannelData data = 2;
+    optional EntryPointData entry_point = 3;
+}
+
+message SetUserChannelRequest {
+    optional string auth = 1;
+    required UserChannelData data = 2;
+    optional bool use_shared = 3;
+}
+
+
+message SetUserChannelResponse {
+    enum Result {
+        OK   = 0;
+        NoAuth = 1;
+    }
+    required Result result = 1;
+}
+
+message GetMyVouchersRequest {
+    optional string auth = 1;
+}
+
+message GetMyVouchersResponse {
+    enum Result {
+        OK   = 0;
+        NoAuth = 1;
+        NoVouchersFound = 2;
+    }
+    required Result status = 1;
+    repeated Voucher vouchers = 2;
+}
+
+service TvService {
+    rpc GetChannels (GetChannelsRequest) returns (GetChannelsResponse) {
+        option (google.api.http) = {
+            post: "/TvService/GetChannels"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/GetChannels.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/GetChannels"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/GetChannels.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/GetChannels.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc OpenStream (OpenStreamRequest) returns (OpenStreamResponse) {
+        option (google.api.http) = {
+            post: "/TvService/OpenStream"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/OpenStream.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/OpenStream"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/OpenStream.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/OpenStream.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc UpdateStream (UpdateStreamRequest) returns (UpdateStreamResponse) {
+        option (google.api.http) = {
+            post: "/TvService/UpdateStream"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/UpdateStream.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/UpdateStream"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/UpdateStream.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/UpdateStream.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc CloseStream (CloseStreamRequest) returns (CloseStreamResponse) {
+        option (google.api.http) = {
+            post: "/TvService/CloseStream"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/CloseStream.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/CloseStream"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/CloseStream.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/CloseStream.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc GetTariffs (GetTariffsRequest) returns (GetTariffsResponse) {
+        option (google.api.http) = {
+            post: "/TvService/GetTariffs"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/GetTariffs.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc GetSubscriptions (GetSubscriptionsRequest) returns (GetSubscriptionsResponse) {
+        option (google.api.http) = {
+            post: "/TvService/GetSubscriptions"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/GetSubscriptions.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc GetTariffsOffers (GetTariffsOffersRequest) returns (GetTariffsOffersResponse) {
+        option (google.api.http) = {
+            post: "/TvService/GetTariffsOffers"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/GetTariffsOffers.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc GetUserInfo (GetUserInfoRequest) returns (GetUserInfoResponse) {
+        option (google.api.http) = {
+            post: "/TvService/GetUserInfo"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/GetUserInfo.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/GetUserInfo"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/GetUserInfo.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/GetUserInfo.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc GetUserChannel (UserChannelRequest) returns (UserChannelResponse) {
+        option (google.api.http) = {
+            post: "/TvService/GetUserChannel"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/GetUserChannel.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/StbServerService/GetUserChannel"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/StbServerService/GetUserChannel.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/StbServerService/GetUserChannel.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc SetUserChannel (SetUserChannelRequest) returns (SetUserChannelResponse) {
+        option (google.api.http) = {
+            post: "/TvService/SetUserChannel"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/SetUserChannel.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/StbServerService/SetUserChannel"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/StbServerService/SetUserChannel.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/StbServerService/SetUserChannel.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc GetMyVouchers (GetMyVouchersRequest) returns (GetMyVouchersResponse) {
+        option (google.api.http) = {
+            post: "/TvService/GetMyVouchers"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/GetMyVouchers.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc GetTvShowInfo (GetTvShowInfoRequest) returns (GetTvShowInfoResponse) {
+        option (google.api.http) = {
+            post: "/TvService/GetTvShowInfo"
+            body: "*"
+            additional_bindings {
+                post: "/TvService/GetTvShowInfo.json"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/GetTvShowInfo"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/GetTvShowInfo.pb"
+                body: "*"
+            }
+            additional_bindings {
+                post: "/TvServerService/GetTvShowInfo.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc GetEpgRecordPreview (GetEpgRecordPreviewRequest) returns (GetEpgRecordPreviewResponse) {
+            option (google.api.http) = {
+                post: "/TvService/GetEpgRecordPreview"
+                body: "*"
+                additional_bindings {
+                    post: "/TvService/GetEpgRecordPreview.json"
+                    body: "*"
+                }
+                additional_bindings {
+                    post: "/TvServerService/GetEpgRecordPreview"
+                    body: "*"
+                }
+                additional_bindings {
+                    post: "/TvServerService/GetEpgRecordPreview.pb"
+                    body: "*"
+                }
+                additional_bindings {
+                    post: "/TvServerService/GetEpgRecordPreview.json"
+                    body: "*"
+                }
+            };
+        }
+}

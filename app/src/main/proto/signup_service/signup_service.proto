@@ -1,0 +1,325 @@
+syntax = "proto2";
+package signup_service;
+
+option go_package = "gitlab.sweet.tv/go/signup_service";
+option java_package = "com.konstandaki.signup_service";
+
+import "google/api/annotations.proto";
+
+import "device/device.proto";
+import "application/application.proto";
+
+message SmsMessage {
+    optional string id = 1;
+    optional string external_id = 2;
+    optional string from = 3;
+    optional string to = 4;
+    optional string body = 5;
+}
+
+message SetPhoneRequest {
+    required string phone = 1;
+    required device.DeviceInfo device = 2;
+    optional string locale = 3;
+}
+
+message SetPhoneResponse {
+    enum Result {
+        OK = 0;
+        NoAttempts = 1;
+        AccountIsDeleted = 2;
+    }
+    required Result status = 1;
+    optional int32 retry_after = 2;
+    optional string message_id = 3;
+}
+
+message SetCodeRequest {
+    required string phone = 1;
+    required int32 confirmation_code = 2;
+    optional uint32 auto_user_id = 100;
+}
+
+message SetCodeResponse {
+    enum Result {
+        OK = 0;
+        CodeInvalid = 1;
+        NoAttempts = 2;
+        Expired = 3;
+    }
+    required Result status = 1;
+    optional string auth_token = 2;
+    optional int32 ttl = 3;
+    optional int32 retry_after = 4;
+    optional string refresh_token = 5;
+    optional string access_token = 6;
+    optional int32 expires_in = 7;
+    optional bool is_new_account = 8;
+}
+
+message GetPartnerCodeRequest {
+    required device.DeviceInfo device = 1;
+}
+
+message GetPartnerCodeResponse {
+    enum Result {
+        OK = 0;
+        Error = 1;
+    }
+    required Result status = 1;
+    optional int32 code = 2;
+}
+
+message GetMessageStatusRequest {
+    required string message_id = 1;
+}
+
+message GetMessageStatusResponse {
+    enum Status {
+        UNKNOWN = 0;
+        IN_QUEUE = 1;
+        SENDED = 2;
+        DELIVERED = 3;
+        INCORRECT_DESTINATION = 4;
+    }
+}
+
+message AuthRequest {
+    optional string login = 1;
+    optional string password = 2;
+    optional device.DeviceInfo device = 3;
+    optional application.ApplicationInfo application = 4;
+    optional string locale = 5;
+}
+
+message AuthResponse {
+    enum Result {
+        OK   = 0;
+        WrongUser = 1;
+        WrongPassword = 2;
+    }
+
+    enum SignupMethod {
+        SMS = 0;
+        AUTO_USER = 1;
+    }
+
+    required Result status = 1;
+    optional string auth_token = 2;
+    optional uint32 ttl = 3;
+    optional int32 company_id = 4;
+    optional SignupMethod signup_method = 100;
+}
+
+message AuthCheckRequest {
+    optional string auth = 1;
+    optional string locale = 2;
+}
+
+message AuthCheckResponse {
+    enum Result {
+        OK     = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+}
+
+message LogoutRequest {
+    optional string auth = 1;
+}
+
+message LogoutResponse {
+    enum Result {
+        OK   = 0;
+        NoAuth = 1;
+    }
+    required Result status = 1;
+}
+
+//CodeAuthTransaction
+message CodeAuthTransactionStartRequest {
+    required device.DeviceInfo device = 1;
+    optional application.ApplicationInfo application = 2;
+    optional string locale = 3;
+}
+
+message CodeAuthTransactionStartResponse {
+    enum AuthType {
+        Code	= 0;
+        SMS		= 1;
+    }
+    required uint32 transaction_id = 1;
+    required AuthType auth_type = 2;
+    optional uint32 auth_code = 3;
+}
+
+message CodeAuthTransactionUpdateRequest {
+    required uint32 transaction_id = 1;
+}
+
+message CodeAuthTransactionUpdateResponse {
+    enum Result {
+        OK	    = 0;
+        TransactionIdInvalid = 1;
+    }
+    required Result status = 1;
+}
+
+message CodeAuthTransactionSetPhoneRequest {
+    required uint32 transaction_id = 1;
+    required string phone = 2;
+}
+
+message CodeAuthTransactionSetPhoneResponse {
+    enum Result {
+        OK	    		= 0;
+        PhoneInvalid	= 1;
+        TransactionIdInvalid = 2;
+    }
+    required Result status = 1;
+}
+
+message CodeAuthTransactionSetCodeRequest {
+    required uint32 transaction_id = 1;
+    required uint32 auth_code = 2;
+}
+
+message CodeAuthTransactionSetCodeResponse {
+    enum Result {
+        OK          = 0;
+        CodeInvalid = 1;
+        TransactionIdInvalid = 2;
+    }
+    required Result status = 1;
+    optional string auth_token = 2;
+    optional uint32 ttl = 3 [ default = 3600 ];
+    optional int32 company_id = 4;
+}
+
+service SignupService {
+    rpc SetPhone(SetPhoneRequest) returns (SetPhoneResponse) {
+        option (google.api.http) = {
+            post: "/SignupService/SetPhone"
+            body: "*"
+            additional_bindings: {
+                post: "/SignupService/SetPhone.json"
+                body: "*"
+            }
+        };
+    }
+    rpc SetCode(SetCodeRequest) returns (SetCodeResponse) {
+        option (google.api.http) = {
+            post: "/SignupService/SetCode"
+            body: "*"
+            additional_bindings: {
+                post: "/SignupService/SetCode.json"
+                body: "*"
+            }
+        };
+    }
+    rpc GetPartnerCode(GetPartnerCodeRequest) returns (GetPartnerCodeResponse) {
+        option (google.api.http) = {
+            post: "/SignupService/GetPartnerCode"
+            body: "*"
+            additional_bindings: {
+                post: "/SignupService/GetPartnerCode.json"
+                body: "*"
+            }
+        };
+    }
+    rpc Auth(AuthRequest) returns (AuthResponse) {
+        option (google.api.http) = {
+            post: "/SignupService/Auth"
+            body: "*"
+            additional_bindings: {
+                post: "/SignupService/Auth.json"
+                body: "*"
+            }
+        };
+    }
+    rpc AuthCheck(AuthCheckRequest) returns (AuthCheckResponse) {
+        option (google.api.http) = {
+            post: "/SignupService/AuthCheck"
+            body: "*"
+            additional_bindings: {
+                post: "/SignupService/AuthCheck.json"
+                body: "*"
+            }
+        };
+    }
+    rpc Logout(LogoutRequest) returns (LogoutResponse) {
+        option (google.api.http) = {
+            post: "/SignupService/Logout"
+            body: "*"
+            additional_bindings: {
+                post: "/SignupService/Logout.json"
+                body: "*"
+            }
+        };
+    }
+
+    rpc CodeAuthTransactionStart(CodeAuthTransactionStartRequest) returns (CodeAuthTransactionStartResponse) {
+        option (google.api.http) = {
+            post: "/SignupService/CodeAuthTransactionStart"
+            body: "*"
+            additional_bindings: [
+                {
+                    post: "/SignupService/CodeAuthTransactionStart.pb"
+                    body: "*"
+                },
+                {
+                    post: "/SignupService/CodeAuthTransactionStart.json"
+                    body: "*"
+                }
+            ]
+        };
+    }
+    rpc CodeAuthTransactionUpdate(CodeAuthTransactionUpdateRequest) returns (CodeAuthTransactionUpdateResponse) {
+        option (google.api.http) = {
+            post: "/SignupService/CodeAuthTransactionUpdate"
+            body: "*"
+            additional_bindings: [
+                {
+                    post: "/SignupService/CodeAuthTransactionUpdate.pb"
+                    body: "*"
+                },
+                {
+                    post: "/SignupService/CodeAuthTransactionUpdate.json"
+                    body: "*"
+                }
+            ]
+        };
+    }
+    rpc CodeAuthTransactionSetPhone(CodeAuthTransactionSetPhoneRequest) returns (CodeAuthTransactionSetPhoneResponse) {
+        option (google.api.http) = {
+            post: "/SignupService/CodeAuthTransactionSetPhone"
+            body: "*"
+            additional_bindings: [
+                {
+                    post: "/SignupService/CodeAuthTransactionSetPhone.pb"
+                    body: "*"
+                },
+                {
+                    post: "/SignupService/CodeAuthTransactionSetPhone.json"
+                    body: "*"
+                }
+            ]
+        };
+    }
+    rpc CodeAuthTransactionSetCode(CodeAuthTransactionSetCodeRequest) returns (CodeAuthTransactionSetCodeResponse) {
+        option (google.api.http) = {
+            post: "/SignupService/CodeAuthTransactionSetCode"
+            body: "*"
+            additional_bindings: [
+                {
+                    post: "/SignupService/CodeAuthTransactionSetCode.pb"
+                    body: "*"
+                },
+                {
+                    post: "/SignupService/CodeAuthTransactionSetCode.json"
+                    body: "*"
+                }
+            ]
+        };
+    }
+}
