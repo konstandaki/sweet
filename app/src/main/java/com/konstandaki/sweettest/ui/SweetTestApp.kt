@@ -10,10 +10,9 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.konstandaki.sweettest.R
-import com.konstandaki.sweettest.ui.signup.SignupScreen
-import com.konstandaki.sweettest.ui.signup.SignupViewModel
+import com.konstandaki.sweettest.ui.home.HomeScreen
+import com.konstandaki.sweettest.ui.home.HomeViewModel
 
 @Composable
 fun SweetTestApp(modifier: Modifier = Modifier) {
@@ -27,13 +26,7 @@ fun SweetTestApp(modifier: Modifier = Modifier) {
                 .padding(it),
             color = MaterialTheme.colors.background
         ) {
-            val signupViewModel: SignupViewModel = viewModel(factory = AppViewModelProvider.Factory)
-            SignupScreen(
-                onSignupClick = { signupViewModel.setPhone("380662856580") }
-                //onSignupClick = { signupViewModel.setPhone("00000000000") }
-                //marsUiState = marsViewModel.marsUiState,
-                //retryAction = marsViewModel::getMarsPhotos
-            )
+            HomeScreen()
         }
     }
 }

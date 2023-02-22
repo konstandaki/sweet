@@ -2,6 +2,7 @@ package com.konstandaki.sweettest
 
 import android.app.Application
 import com.konstandaki.sweettest.data.AppContainer
+import com.konstandaki.sweettest.data.AppDataContainer
 
 class SweetTestApplication : Application() {
 
@@ -11,6 +12,6 @@ class SweetTestApplication : Application() {
     lateinit var container: AppContainer
     override fun onCreate() {
         super.onCreate()
-        //container = AppDataContainer(this)
+        container = AppDataContainer(this)
     }
 }

@@ -9,15 +9,6 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.media3.ui.PlayerView
-import com.konstandaki.sweettest.R
-import com.konstandaki.sweettest.ui.navigation.NavigationDestination
-
-object PlayerDestination : NavigationDestination {
-    override val route = "item_details"
-    override val titleRes = R.string.screen_player
-    const val videoIdArg = "videoId"
-    val routeWithArgs = "$route/{$videoIdArg}"
-}
 
 @Composable
 fun PlayerScreen(

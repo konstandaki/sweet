@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">SweetTest</string>
 
-    <string name="screen_signup">Sign Up</string>
-    <string name="screen_videos">Videos</string>
-    <string name="screen_player">Player</string>
-
     <string name="label_telephone">Tel</string>
     <string name="label_code">Code</string>
+    <string name="action_get_code">Get Code</string>
     <string name="action_signup">Sign Up</string>
+
+    <string name="loading_failed">Failed to load</string>
+    <string name="OK">OK</string>
+    <string name="loading">Loading</string>
+    <string name="img">Img</string>
+
 </resources>

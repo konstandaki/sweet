@@ -6,16 +6,21 @@ import androidx.activity.compose.setContent
 import com.konstandaki.sweettest.ui.SweetTestApp
 import com.konstandaki.sweettest.ui.theme.SweetTestTheme
 
-/**
- * Activity for cupcake order flow.
- */
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             SweetTestTheme() {
                 SweetTestApp()
             }
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        val sweetRepository = (application as SweetTestApplication).container.sweetRepository
+        sweetRepository.close()
     }
 }
