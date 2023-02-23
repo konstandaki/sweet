@@ -10,20 +10,23 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.konstandaki.sweettest.SweetTestApplication
 import com.konstandaki.sweettest.data.SweetRepository
+import com.konstandaki.sweettest.network.GrpcClient
 import com.konstandaki.sweettest.network.GrpcClient.Companion.ERROR
 import com.konstandaki.sweettest.network.GrpcClient.Companion.SUCCESS_CODE
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import tv_service.ChannelOuterClass
 
 /**
  * UI state for the Home screen
  */
 sealed interface HomeUiState {
-    data class Success(val photos: List<Any>) : HomeUiState
     object Error : HomeUiState
     object Loading : HomeUiState
     object NotAuthorized : HomeUiState
     object Authorized : HomeUiState
+    data class DataLoaded(val channels: MutableList<ChannelOuterClass.Channel>?) : HomeUiState
+    data class PlayStream(val stream: GrpcClient.Stream) : HomeUiState
 }
 
 data class SignupUiState(
@@ -35,14 +38,23 @@ data class SignupUiState(
 
 class HomeViewModel(private val sweetRepository: SweetRepository) : ViewModel() {
 
-    var homeUiState: HomeUiState by mutableStateOf(HomeUiState.NotAuthorized)
+    private val initialHomeUiState = if (sweetRepository.isAuthTokenPresent()) HomeUiState.Authorized else HomeUiState.NotAuthorized
+
+    var homeUiState: HomeUiState by mutableStateOf(initialHomeUiState)
         private set
 
     var signupUiState by mutableStateOf(SignupUiState())
         private set
 
+    var selectedTabIndex by mutableStateOf(0)
+        private set
+
     fun updateSignupUiState(phone: String, code: String) {
         signupUiState = SignupUiState(phone, code, validatePhone(phone), validateAll(phone, code))
+    }
+
+    fun updateSelectedTabIndex(index: Int) {
+        selectedTabIndex = index
     }
 
     private fun validatePhone(phone: String): Boolean {
@@ -79,6 +91,39 @@ class HomeViewModel(private val sweetRepository: SweetRepository) : ViewModel() 
                     HomeUiState.Authorized
                 }
             }
+        }
+    }
+
+    fun getData() {
+        homeUiState = HomeUiState.Loading
+        viewModelScope.launch(context = Dispatchers.IO) {
+            val channels = sweetRepository.getChannels()
+            homeUiState = if (channels == null) {
+                HomeUiState.Error
+            } else {
+                HomeUiState.DataLoaded(channels)
+            }
+        }
+    }
+
+    fun openStream(channelId: Int) {
+        homeUiState = HomeUiState.Loading
+        viewModelScope.launch(context = Dispatchers.IO) {
+            val stream = sweetRepository.openStream(channelId)
+            homeUiState = if (stream == null) {
+                HomeUiState.Error
+            } else {
+                HomeUiState.PlayStream(stream)
+            }
+        }
+    }
+
+    fun closeStream(streamId: Int) {
+        homeUiState = HomeUiState.Loading
+        viewModelScope.launch(context = Dispatchers.IO) {
+            sweetRepository.closeStream(streamId)
+            homeUiState = HomeUiState.Loading
+            getData()
         }
     }
 

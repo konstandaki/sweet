@@ -120,8 +120,9 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     // media3 with exoplayer
-    implementation 'androidx.media3:media3-exoplayer:1.0.0-rc01'
-    implementation 'androidx.media3:media3-ui:1.0.0-rc01'
+    //implementation 'androidx.media3:media3-exoplayer:1.0.0-rc01'
+    //implementation 'androidx.media3:media3-ui:1.0.0-rc01'
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.3'
 
     //grpc dependency
     //implementation 'io.grpc:grpc-protobuf-lite:1.47.0'

@@ -1,27 +1,38 @@
 package com.konstandaki.sweettest.ui.home
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.Button
-import androidx.compose.material.Card
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.AndroidView
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.ui.StyledPlayerView
+import com.google.android.exoplayer2.util.MimeTypes
 import com.konstandaki.sweettest.R
+import com.konstandaki.sweettest.network.GrpcClient
+import com.konstandaki.sweettest.proto.MovieServiceOuterClass
+import tv_service.ChannelOuterClass
 
 @Composable
 fun HomeScreen(
@@ -38,10 +49,15 @@ fun HomeScreen(
             onGetCodeClick = { homeViewModel.setPhone() },
             onSignupClick = { homeViewModel.setCode() }
         )
-        is HomeUiState.Authorized -> PhotosGridScreen(modifier)
+        is HomeUiState.Authorized -> homeViewModel.getData()
         is HomeUiState.Loading -> LoadingScreen(modifier)
-        is HomeUiState.Success -> PhotosGridScreen(modifier)
-        is HomeUiState.Error -> ErrorScreen(modifier)
+        is HomeUiState.DataLoaded -> TabsScreen(homeViewModel.selectedTabIndex,
+            (homeViewModel.homeUiState as HomeUiState.DataLoaded).channels,
+            onChannelClick = { homeViewModel.openStream(it) },
+            onUpdateTabIndex = { homeViewModel.updateSelectedTabIndex(it) })
+        is HomeUiState.PlayStream -> PlayerScreen((homeViewModel.homeUiState as HomeUiState.PlayStream).stream,
+            onBackPressed = { homeViewModel.closeStream(it) })
+        is HomeUiState.Error -> ErrorScreen()
     }
 }
 
@@ -123,52 +139,164 @@ fun LoadingScreen(modifier: Modifier = Modifier) {
  */
 @Composable
 fun ErrorScreen(modifier: Modifier = Modifier) {
+
     Column(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(stringResource(R.string.loading_failed))
-        Button(onClick = {}/*retryAction*/) {
-            Text(stringResource(R.string.OK))
+        Text(stringResource(R.string.error))
+    }
+}
+
+@Composable
+fun TabsScreen(selectedTabIndex: Int, channels: MutableList<ChannelOuterClass.Channel>?,
+               onChannelClick: (Int) -> Unit, onUpdateTabIndex: (Int) -> Unit) {
+    val titles = listOf("CHANNELS", "MOVIES")
+    Column {
+        TabRow(selectedTabIndex = selectedTabIndex, divider = {}) {
+            titles.forEachIndexed { index, title ->
+                Tab(
+                    text = { Text(title) },
+                    selected = selectedTabIndex == index,
+                    onClick = { onUpdateTabIndex(index) }
+                )
+            }
+        }
+        when (selectedTabIndex) {
+            0 -> ChannelsGrid(channels = channels, onChannelClick = onChannelClick)
+            //1 -> MoviesGrid(moviesByGenres = moviesByGenres, onMovieClick = onMovieClick)
         }
     }
 }
 
-/**
- * The home screen displaying photo grid.
- */
 @Composable
-fun PhotosGridScreen(/*photos: List<MarsPhoto>,*/ modifier: Modifier = Modifier) {
+fun ChannelsGrid(channels: MutableList<ChannelOuterClass.Channel>?,
+                     onChannelClick: (Int) -> Unit, modifier: Modifier = Modifier) {
     LazyVerticalGrid(
         columns = GridCells.Adaptive(150.dp),
         modifier = modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(4.dp)
+        contentPadding = PaddingValues(4.dp),
     ) {
-        /*items(items = photos, key = { photo -> photo.id }) { photo ->
-            MarsPhotoCard(photo)
-        }*/
+        items(items = channels?.toList()!!, key = { channel -> channel.id } ) { channel ->
+            ChannelCard(channel, onChannelClick)
+        }
     }
 }
 
 @Composable
-fun MarsPhotoCard(/*photo: MarsPhoto,*/ modifier: Modifier = Modifier) {
+fun ChannelCard(channel: ChannelOuterClass.Channel, onChannelClick: (Int) -> Unit, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
             .padding(4.dp)
             .fillMaxWidth()
+            .clickable { onChannelClick(channel.id) }
+            .aspectRatio(1.8f),
+        elevation = 8.dp,
+    ) {
+        AsyncImage(
+            model = ImageRequest.Builder(context = LocalContext.current)
+                .data(channel.iconUrl)
+                .crossfade(true)
+                .build(),
+            contentDescription = stringResource(R.string.img),
+            error = painterResource(R.drawable.ic_broken_image),
+            //placeholder = painterResource(R.drawable.loading_img),
+            contentScale = ContentScale.Inside
+        )
+    }
+}
+
+/*@Composable
+fun MoviesGrid(moviesByGenres: MutableMap<MovieServiceOuterClass.Genre, MutableList<MovieServiceOuterClass.Movie>?>,
+               onMovieClick: (Int) -> Unit, modifier: Modifier = Modifier) {
+    Column() {
+        moviesByGenres.keys.forEach {
+            Text(it.title)
+            Spacer(modifier = Modifier.height(16.dp))
+            LazyVerticalGrid(
+                columns = GridCells.Adaptive(150.dp),
+                modifier = modifier.fillMaxWidth(),
+                contentPadding = PaddingValues(4.dp)
+            ) {
+                items(
+                    items = moviesByGenres[it]?.toList() ?: listOf(),
+                    key = { movie -> movie.id }) { movie ->
+                    MovieCard(movie, onMovieClick)
+                }
+            }
+            Divider()
+        }
+    }
+}*/
+
+@Composable
+fun MovieCard(movie: MovieServiceOuterClass.Movie, onChannelClick: (Int) -> Unit, modifier: Modifier = Modifier) {
+    Card(
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable { onChannelClick(movie.id) }
             .aspectRatio(1f),
         elevation = 8.dp,
     ) {
         AsyncImage(
             model = ImageRequest.Builder(context = LocalContext.current)
-                //.data(photo.imgSrc)
+                .data(movie.posterUrl)
                 .crossfade(true)
                 .build(),
             contentDescription = stringResource(R.string.img),
             error = painterResource(R.drawable.ic_broken_image),
             placeholder = painterResource(R.drawable.loading_img),
-            contentScale = ContentScale.FillBounds
+            contentScale = ContentScale.Fit
         )
+    }
+}
+
+@Composable
+fun PlayerScreen(stream: GrpcClient.Stream, onBackPressed: (Int) -> Unit) {
+    val context = LocalContext.current
+
+    val exoPlayer = ExoPlayer.Builder(LocalContext.current)
+        .build()
+        .also { exoPlayer ->
+            val mediaItem = MediaItem.Builder()
+                .setUri(stream.streamUrl)
+                .setMimeType(MimeTypes.APPLICATION_M3U8)
+                .build()
+            exoPlayer.setMediaItem(mediaItem)
+            exoPlayer.prepare()
+        }
+
+    val lifecycleOwner = rememberUpdatedState(LocalLifecycleOwner.current)
+
+    BackHandler {
+        onBackPressed(stream.streamId)
+    }
+
+    DisposableEffect(
+        AndroidView(factory = {
+            StyledPlayerView(context).apply {
+                player = exoPlayer
+            }
+        })
+    ) {
+        val observer = LifecycleEventObserver { owner, event ->
+            when (event) {
+                Lifecycle.Event.ON_PAUSE -> {
+                    exoPlayer.pause()
+                }
+                Lifecycle.Event.ON_RESUME -> {
+                    exoPlayer.play()
+                }
+                else -> {}
+            }
+        }
+        val lifecycle = lifecycleOwner.value.lifecycle
+        lifecycle.addObserver(observer)
+
+        onDispose {
+            exoPlayer.release()
+            lifecycle.removeObserver(observer)
+        }
     }
 }

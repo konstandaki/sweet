@@ -17,8 +17,8 @@ import com.konstandaki.sweettest.ui.home.HomeViewModel
 @Composable
 fun SweetTestApp(modifier: Modifier = Modifier) {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
-        topBar = { TopAppBar(title = { Text(stringResource(R.string.app_name)) }) }
+        modifier = modifier.fillMaxSize()
+        //topBar = { TopAppBar(title = { Text(stringResource(R.string.app_name)) }) }
     ) {
         Surface(
             modifier = Modifier

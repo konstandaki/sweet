@@ -6,7 +6,7 @@
     <string name="action_get_code">Get Code</string>
     <string name="action_signup">Sign Up</string>
 
-    <string name="loading_failed">Failed to load</string>
+    <string name="error">Something went wrong</string>
     <string name="OK">OK</string>
     <string name="loading">Loading</string>
     <string name="img">Img</string>
