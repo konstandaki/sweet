@@ -201,41 +201,18 @@ fun ChannelCard(channel: ChannelOuterClass.Channel, onChannelClick: (Int) -> Uni
                 .build(),
             contentDescription = stringResource(R.string.img),
             error = painterResource(R.drawable.ic_broken_image),
-            //placeholder = painterResource(R.drawable.loading_img),
+            placeholder = painterResource(R.drawable.loading_img),
             contentScale = ContentScale.Inside
         )
     }
 }
 
-/*@Composable
-fun MoviesGrid(moviesByGenres: MutableMap<MovieServiceOuterClass.Genre, MutableList<MovieServiceOuterClass.Movie>?>,
-               onMovieClick: (Int) -> Unit, modifier: Modifier = Modifier) {
-    Column() {
-        moviesByGenres.keys.forEach {
-            Text(it.title)
-            Spacer(modifier = Modifier.height(16.dp))
-            LazyVerticalGrid(
-                columns = GridCells.Adaptive(150.dp),
-                modifier = modifier.fillMaxWidth(),
-                contentPadding = PaddingValues(4.dp)
-            ) {
-                items(
-                    items = moviesByGenres[it]?.toList() ?: listOf(),
-                    key = { movie -> movie.id }) { movie ->
-                    MovieCard(movie, onMovieClick)
-                }
-            }
-            Divider()
-        }
-    }
-}*/
-
 @Composable
-fun MovieCard(movie: MovieServiceOuterClass.Movie, onChannelClick: (Int) -> Unit, modifier: Modifier = Modifier) {
+fun MovieCard(movie: MovieServiceOuterClass.Movie, onMovieClick: (Int) -> Unit, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .clickable { onChannelClick(movie.id) }
+            .clickable { onMovieClick(movie.id) }
             .aspectRatio(1f),
         elevation = 8.dp,
     ) {
